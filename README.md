@@ -18,11 +18,18 @@ Example request
 
 ```json
 {
-  "method": "GET",
-  "path": "/repos/:owner/:repo",
+  "scope": "repos",
+  "idName": "get",
+  "route": "GET /repos/:owner/:repo",
   "params": [
     "owner",
     "repo"
+  ],
+  "setup": [
+    {
+      "route": "POST /user/repos",
+      "name": "tmp-{SCOPE}-{ID_NAME}-{TIMESTAMP}"
+    }
   ]
 }
 ```
