@@ -6,7 +6,7 @@ const ROUTES = require('@octokit/routes')
 
 const requests = Object.keys(ROUTES).reduce((requests, scope) => {
   ROUTES[scope].forEach(endpoint => {
-    const { method, path, params, previews } = endpoint
+    const { idName, method, path, params, previews } = endpoint
     const requestParams = params
       .filter(param => param.required && !/[.\[]/.test(param.name))
       .map(param => param.name)
@@ -17,7 +17,7 @@ const requests = Object.keys(ROUTES).reduce((requests, scope) => {
 
     requests.push(
       Object.assign(
-        { method, path, params: requestParams },
+        { scope, idName, method, path, params: requestParams },
         acceptHeader ? { headers: { accept: acceptHeader } } : {}
       )
     )
