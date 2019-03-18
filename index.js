@@ -1,5 +1,5 @@
 const { writeFileSync } = require('fs')
-const FILE_PATH = 'requests.json'
+const FILE_PATH = 'generated/requests.json'
 
 const sortBy = require('lodash/sortBy')
 const ROUTES = require('@octokit/routes')
