@@ -1,12 +1,9 @@
 {
   "name": "github-rest-api-responses",
   "version": "1.0.0",
-  "description": "Record responses for all of GitHub’s v3 REST API endpoints",
+  "description": "Record responses for all of GitHubâs v3 REST API endpoints",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gr2m/github-rest-api-responses.git"
-  },
+  "repository": "github:gr2m/github-rest-api-responses",
   "scripts": {
     "test": "standard"
   },
