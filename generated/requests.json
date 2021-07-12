@@ -2,8 +2,7 @@
   {
     "scope": "apps",
     "idName": "create-from-manifest",
-    "method": "POST",
-    "path": "/app-manifests/:code/conversions",
+    "route": "POST /app-manifests/:code/conversions",
     "params": [
       "code"
     ],
@@ -14,8 +13,7 @@
   {
     "scope": "apps",
     "idName": "get-authenticated",
-    "method": "GET",
-    "path": "/app",
+    "route": "GET /app",
     "params": [],
     "headers": {
       "accept": "application/vnd.machine-man"
@@ -24,8 +22,7 @@
   {
     "scope": "apps",
     "idName": "list-installations",
-    "method": "GET",
-    "path": "/app/installations",
+    "route": "GET /app/installations",
     "params": [],
     "headers": {
       "accept": "application/vnd.machine-man"
@@ -34,8 +31,7 @@
   {
     "scope": "apps",
     "idName": "get-installation",
-    "method": "GET",
-    "path": "/app/installations/:installation_id",
+    "route": "GET /app/installations/:installation_id",
     "params": [
       "installation_id"
     ],
@@ -46,8 +42,7 @@
   {
     "scope": "apps",
     "idName": "create-installation-token",
-    "method": "POST",
-    "path": "/app/installations/:installation_id/access_tokens",
+    "route": "POST /app/installations/:installation_id/access_tokens",
     "params": [
       "installation_id"
     ],
@@ -58,8 +53,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "revoke-grant-for-application",
-    "method": "DELETE",
-    "path": "/applications/:client_id/grants/:access_token",
+    "route": "DELETE /applications/:client_id/grants/:access_token",
     "params": [
       "client_id",
       "access_token"
@@ -68,8 +62,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "check-authorization",
-    "method": "GET",
-    "path": "/applications/:client_id/tokens/:access_token",
+    "route": "GET /applications/:client_id/tokens/:access_token",
     "params": [
       "client_id",
       "access_token"
@@ -78,8 +71,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "reset-authorization",
-    "method": "POST",
-    "path": "/applications/:client_id/tokens/:access_token",
+    "route": "POST /applications/:client_id/tokens/:access_token",
     "params": [
       "client_id",
       "access_token"
@@ -88,8 +80,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "revoke-authorization-for-application",
-    "method": "DELETE",
-    "path": "/applications/:client_id/tokens/:access_token",
+    "route": "DELETE /applications/:client_id/tokens/:access_token",
     "params": [
       "client_id",
       "access_token"
@@ -98,15 +89,13 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "list-grants",
-    "method": "GET",
-    "path": "/applications/grants",
+    "route": "GET /applications/grants",
     "params": []
   },
   {
     "scope": "oauthAuthorizations",
     "idName": "get-grant",
-    "method": "GET",
-    "path": "/applications/grants/:grant_id",
+    "route": "GET /applications/grants/:grant_id",
     "params": [
       "grant_id"
     ]
@@ -114,8 +103,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "delete-grant",
-    "method": "DELETE",
-    "path": "/applications/grants/:grant_id",
+    "route": "DELETE /applications/grants/:grant_id",
     "params": [
       "grant_id"
     ]
@@ -123,8 +111,7 @@
   {
     "scope": "apps",
     "idName": "get-by-slug",
-    "method": "GET",
-    "path": "/apps/:app_slug",
+    "route": "GET /apps/:app_slug",
     "params": [
       "app_slug"
     ],
@@ -135,15 +122,13 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "list-authorizations",
-    "method": "GET",
-    "path": "/authorizations",
+    "route": "GET /authorizations",
     "params": []
   },
   {
     "scope": "oauthAuthorizations",
     "idName": "create-authorization",
-    "method": "POST",
-    "path": "/authorizations",
+    "route": "POST /authorizations",
     "params": [
       "note"
     ]
@@ -151,8 +136,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "get-authorization",
-    "method": "GET",
-    "path": "/authorizations/:authorization_id",
+    "route": "GET /authorizations/:authorization_id",
     "params": [
       "authorization_id"
     ]
@@ -160,8 +144,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "update-authorization",
-    "method": "PATCH",
-    "path": "/authorizations/:authorization_id",
+    "route": "PATCH /authorizations/:authorization_id",
     "params": [
       "authorization_id"
     ]
@@ -169,8 +152,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "delete-authorization",
-    "method": "DELETE",
-    "path": "/authorizations/:authorization_id",
+    "route": "DELETE /authorizations/:authorization_id",
     "params": [
       "authorization_id"
     ]
@@ -178,8 +160,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "get-or-create-authorization-for-app",
-    "method": "PUT",
-    "path": "/authorizations/clients/:client_id",
+    "route": "PUT /authorizations/clients/:client_id",
     "params": [
       "client_id",
       "client_secret"
@@ -188,8 +169,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "get-or-create-authorization-for-app-and-fingerprint",
-    "method": "PUT",
-    "path": "/authorizations/clients/:client_id/:fingerprint",
+    "route": "PUT /authorizations/clients/:client_id/:fingerprint",
     "params": [
       "client_id",
       "fingerprint",
@@ -199,8 +179,7 @@
   {
     "scope": "oauthAuthorizations",
     "idName": "get-or-create-authorization-for-app-fingerprint",
-    "method": "PUT",
-    "path": "/authorizations/clients/:client_id/:fingerprint",
+    "route": "PUT /authorizations/clients/:client_id/:fingerprint",
     "params": [
       "client_id",
       "fingerprint",
@@ -210,8 +189,7 @@
   {
     "scope": "codesOfConduct",
     "idName": "list-conduct-codes",
-    "method": "GET",
-    "path": "/codes_of_conduct",
+    "route": "GET /codes_of_conduct",
     "params": [],
     "headers": {
       "accept": "application/vnd.scarlet-witch"
@@ -220,8 +198,7 @@
   {
     "scope": "codesOfConduct",
     "idName": "get-conduct-code",
-    "method": "GET",
-    "path": "/codes_of_conduct/:key",
+    "route": "GET /codes_of_conduct/:key",
     "params": [
       "key"
     ],
@@ -232,8 +209,7 @@
   {
     "scope": "apps",
     "idName": "create-content-attachment",
-    "method": "POST",
-    "path": "/content_references/:content_reference_id/attachments",
+    "route": "POST /content_references/:content_reference_id/attachments",
     "params": [
       "content_reference_id",
       "title",
@@ -246,36 +222,31 @@
   {
     "scope": "emojis",
     "idName": "get",
-    "method": "GET",
-    "path": "/emojis",
+    "route": "GET /emojis",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "list-public-events",
-    "method": "GET",
-    "path": "/events",
+    "route": "GET /events",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "list-feeds",
-    "method": "GET",
-    "path": "/feeds",
+    "route": "GET /feeds",
     "params": []
   },
   {
     "scope": "gists",
     "idName": "list",
-    "method": "GET",
-    "path": "/gists",
+    "route": "GET /gists",
     "params": []
   },
   {
     "scope": "gists",
     "idName": "create",
-    "method": "POST",
-    "path": "/gists",
+    "route": "POST /gists",
     "params": [
       "files"
     ]
@@ -283,8 +254,7 @@
   {
     "scope": "gists",
     "idName": "get",
-    "method": "GET",
-    "path": "/gists/:gist_id",
+    "route": "GET /gists/:gist_id",
     "params": [
       "gist_id"
     ]
@@ -292,8 +262,7 @@
   {
     "scope": "gists",
     "idName": "edit",
-    "method": "PATCH",
-    "path": "/gists/:gist_id",
+    "route": "PATCH /gists/:gist_id",
     "params": [
       "gist_id"
     ]
@@ -301,8 +270,7 @@
   {
     "scope": "gists",
     "idName": "delete",
-    "method": "DELETE",
-    "path": "/gists/:gist_id",
+    "route": "DELETE /gists/:gist_id",
     "params": [
       "gist_id"
     ]
@@ -310,8 +278,7 @@
   {
     "scope": "gists",
     "idName": "get-revision",
-    "method": "GET",
-    "path": "/gists/:gist_id/:sha",
+    "route": "GET /gists/:gist_id/:sha",
     "params": [
       "gist_id",
       "sha"
@@ -320,8 +287,7 @@
   {
     "scope": "gists",
     "idName": "list-comments",
-    "method": "GET",
-    "path": "/gists/:gist_id/comments",
+    "route": "GET /gists/:gist_id/comments",
     "params": [
       "gist_id"
     ]
@@ -329,8 +295,7 @@
   {
     "scope": "gists",
     "idName": "create-comment",
-    "method": "POST",
-    "path": "/gists/:gist_id/comments",
+    "route": "POST /gists/:gist_id/comments",
     "params": [
       "gist_id",
       "body"
@@ -339,8 +304,7 @@
   {
     "scope": "gists",
     "idName": "get-comment",
-    "method": "GET",
-    "path": "/gists/:gist_id/comments/:comment_id",
+    "route": "GET /gists/:gist_id/comments/:comment_id",
     "params": [
       "gist_id",
       "comment_id"
@@ -349,8 +313,7 @@
   {
     "scope": "gists",
     "idName": "edit-comment",
-    "method": "PATCH",
-    "path": "/gists/:gist_id/comments/:comment_id",
+    "route": "PATCH /gists/:gist_id/comments/:comment_id",
     "params": [
       "gist_id",
       "comment_id",
@@ -360,8 +323,7 @@
   {
     "scope": "gists",
     "idName": "delete-comment",
-    "method": "DELETE",
-    "path": "/gists/:gist_id/comments/:comment_id",
+    "route": "DELETE /gists/:gist_id/comments/:comment_id",
     "params": [
       "gist_id",
       "comment_id"
@@ -370,8 +332,7 @@
   {
     "scope": "gists",
     "idName": "list-commits",
-    "method": "GET",
-    "path": "/gists/:gist_id/commits",
+    "route": "GET /gists/:gist_id/commits",
     "params": [
       "gist_id"
     ]
@@ -379,8 +340,7 @@
   {
     "scope": "gists",
     "idName": "list-forks",
-    "method": "GET",
-    "path": "/gists/:gist_id/forks",
+    "route": "GET /gists/:gist_id/forks",
     "params": [
       "gist_id"
     ]
@@ -388,8 +348,7 @@
   {
     "scope": "gists",
     "idName": "fork",
-    "method": "POST",
-    "path": "/gists/:gist_id/forks",
+    "route": "POST /gists/:gist_id/forks",
     "params": [
       "gist_id"
     ]
@@ -397,8 +356,7 @@
   {
     "scope": "gists",
     "idName": "check-is-starred",
-    "method": "GET",
-    "path": "/gists/:gist_id/star",
+    "route": "GET /gists/:gist_id/star",
     "params": [
       "gist_id"
     ]
@@ -406,8 +364,7 @@
   {
     "scope": "gists",
     "idName": "star",
-    "method": "PUT",
-    "path": "/gists/:gist_id/star",
+    "route": "PUT /gists/:gist_id/star",
     "params": [
       "gist_id"
     ]
@@ -415,8 +372,7 @@
   {
     "scope": "gists",
     "idName": "unstar",
-    "method": "DELETE",
-    "path": "/gists/:gist_id/star",
+    "route": "DELETE /gists/:gist_id/star",
     "params": [
       "gist_id"
     ]
@@ -424,29 +380,25 @@
   {
     "scope": "gists",
     "idName": "list-public",
-    "method": "GET",
-    "path": "/gists/public",
+    "route": "GET /gists/public",
     "params": []
   },
   {
     "scope": "gists",
     "idName": "list-starred",
-    "method": "GET",
-    "path": "/gists/starred",
+    "route": "GET /gists/starred",
     "params": []
   },
   {
     "scope": "gitignore",
     "idName": "list-templates",
-    "method": "GET",
-    "path": "/gitignore/templates",
+    "route": "GET /gitignore/templates",
     "params": []
   },
   {
     "scope": "gitignore",
     "idName": "get-template",
-    "method": "GET",
-    "path": "/gitignore/templates/:name",
+    "route": "GET /gitignore/templates/:name",
     "params": [
       "name"
     ]
@@ -454,8 +406,7 @@
   {
     "scope": "apps",
     "idName": "list-repos",
-    "method": "GET",
-    "path": "/installation/repositories",
+    "route": "GET /installation/repositories",
     "params": [],
     "headers": {
       "accept": "application/vnd.machine-man"
@@ -464,15 +415,13 @@
   {
     "scope": "issues",
     "idName": "list",
-    "method": "GET",
-    "path": "/issues",
+    "route": "GET /issues",
     "params": []
   },
   {
     "scope": "search",
     "idName": "issues-legacy",
-    "method": "GET",
-    "path": "/legacy/issues/search/:owner/:repository/:state/:keyword",
+    "route": "GET /legacy/issues/search/:owner/:repository/:state/:keyword",
     "params": [
       "owner",
       "repository",
@@ -483,8 +432,7 @@
   {
     "scope": "search",
     "idName": "repos-legacy",
-    "method": "GET",
-    "path": "/legacy/repos/search/:keyword",
+    "route": "GET /legacy/repos/search/:keyword",
     "params": [
       "keyword"
     ]
@@ -492,8 +440,7 @@
   {
     "scope": "search",
     "idName": "email-legacy",
-    "method": "GET",
-    "path": "/legacy/user/email/:email",
+    "route": "GET /legacy/user/email/:email",
     "params": [
       "email"
     ]
@@ -501,8 +448,7 @@
   {
     "scope": "search",
     "idName": "users-legacy",
-    "method": "GET",
-    "path": "/legacy/user/search/:keyword",
+    "route": "GET /legacy/user/search/:keyword",
     "params": [
       "keyword"
     ]
@@ -510,22 +456,19 @@
   {
     "scope": "licenses",
     "idName": "list-commonly-used",
-    "method": "GET",
-    "path": "/licenses",
+    "route": "GET /licenses",
     "params": []
   },
   {
     "scope": "licenses",
     "idName": "list",
-    "method": "GET",
-    "path": "/licenses",
+    "route": "GET /licenses",
     "params": []
   },
   {
     "scope": "licenses",
     "idName": "get",
-    "method": "GET",
-    "path": "/licenses/:license",
+    "route": "GET /licenses/:license",
     "params": [
       "license"
     ]
@@ -533,8 +476,7 @@
   {
     "scope": "markdown",
     "idName": "render",
-    "method": "POST",
-    "path": "/markdown",
+    "route": "POST /markdown",
     "params": [
       "text"
     ]
@@ -542,8 +484,7 @@
   {
     "scope": "markdown",
     "idName": "render-raw",
-    "method": "POST",
-    "path": "/markdown/raw",
+    "route": "POST /markdown/raw",
     "params": [
       "data"
     ]
@@ -551,8 +492,7 @@
   {
     "scope": "apps",
     "idName": "check-account-is-associated-with-any",
-    "method": "GET",
-    "path": "/marketplace_listing/accounts/:account_id",
+    "route": "GET /marketplace_listing/accounts/:account_id",
     "params": [
       "account_id"
     ]
@@ -560,15 +500,13 @@
   {
     "scope": "apps",
     "idName": "list-plans",
-    "method": "GET",
-    "path": "/marketplace_listing/plans",
+    "route": "GET /marketplace_listing/plans",
     "params": []
   },
   {
     "scope": "apps",
     "idName": "list-accounts-user-or-org-on-plan",
-    "method": "GET",
-    "path": "/marketplace_listing/plans/:plan_id/accounts",
+    "route": "GET /marketplace_listing/plans/:plan_id/accounts",
     "params": [
       "plan_id"
     ]
@@ -576,8 +514,7 @@
   {
     "scope": "apps",
     "idName": "check-account-is-associated-with-any-stubbed",
-    "method": "GET",
-    "path": "/marketplace_listing/stubbed/accounts/:account_id",
+    "route": "GET /marketplace_listing/stubbed/accounts/:account_id",
     "params": [
       "account_id"
     ]
@@ -585,15 +522,13 @@
   {
     "scope": "apps",
     "idName": "list-plans-stubbed",
-    "method": "GET",
-    "path": "/marketplace_listing/stubbed/plans",
+    "route": "GET /marketplace_listing/stubbed/plans",
     "params": []
   },
   {
     "scope": "apps",
     "idName": "list-accounts-user-or-org-on-plan-stubbed",
-    "method": "GET",
-    "path": "/marketplace_listing/stubbed/plans/:plan_id/accounts",
+    "route": "GET /marketplace_listing/stubbed/plans/:plan_id/accounts",
     "params": [
       "plan_id"
     ]
@@ -601,15 +536,13 @@
   {
     "scope": "meta",
     "idName": "get",
-    "method": "GET",
-    "path": "/meta",
+    "route": "GET /meta",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "list-public-events-for-repo-network",
-    "method": "GET",
-    "path": "/networks/:owner/:repo/events",
+    "route": "GET /networks/:owner/:repo/events",
     "params": [
       "owner",
       "repo"
@@ -618,22 +551,19 @@
   {
     "scope": "activity",
     "idName": "list-notifications",
-    "method": "GET",
-    "path": "/notifications",
+    "route": "GET /notifications",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "mark-as-read",
-    "method": "PUT",
-    "path": "/notifications",
+    "route": "PUT /notifications",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "get-thread",
-    "method": "GET",
-    "path": "/notifications/threads/:thread_id",
+    "route": "GET /notifications/threads/:thread_id",
     "params": [
       "thread_id"
     ]
@@ -641,8 +571,7 @@
   {
     "scope": "activity",
     "idName": "mark-thread-as-read",
-    "method": "PATCH",
-    "path": "/notifications/threads/:thread_id",
+    "route": "PATCH /notifications/threads/:thread_id",
     "params": [
       "thread_id"
     ]
@@ -650,8 +579,7 @@
   {
     "scope": "activity",
     "idName": "get-thread-subscription",
-    "method": "GET",
-    "path": "/notifications/threads/:thread_id/subscription",
+    "route": "GET /notifications/threads/:thread_id/subscription",
     "params": [
       "thread_id"
     ]
@@ -659,8 +587,7 @@
   {
     "scope": "activity",
     "idName": "set-thread-subscription",
-    "method": "PUT",
-    "path": "/notifications/threads/:thread_id/subscription",
+    "route": "PUT /notifications/threads/:thread_id/subscription",
     "params": [
       "thread_id"
     ]
@@ -668,8 +595,7 @@
   {
     "scope": "activity",
     "idName": "delete-thread-subscription",
-    "method": "DELETE",
-    "path": "/notifications/threads/:thread_id/subscription",
+    "route": "DELETE /notifications/threads/:thread_id/subscription",
     "params": [
       "thread_id"
     ]
@@ -677,15 +603,13 @@
   {
     "scope": "orgs",
     "idName": "list",
-    "method": "GET",
-    "path": "/organizations",
+    "route": "GET /organizations",
     "params": []
   },
   {
     "scope": "orgs",
     "idName": "get",
-    "method": "GET",
-    "path": "/orgs/:org",
+    "route": "GET /orgs/:org",
     "params": [
       "org"
     ]
@@ -693,8 +617,7 @@
   {
     "scope": "orgs",
     "idName": "edit",
-    "method": "PATCH",
-    "path": "/orgs/:org",
+    "route": "PATCH /orgs/:org",
     "params": [
       "org"
     ]
@@ -702,8 +625,7 @@
   {
     "scope": "orgs",
     "idName": "list-blocked-users",
-    "method": "GET",
-    "path": "/orgs/:org/blocks",
+    "route": "GET /orgs/:org/blocks",
     "params": [
       "org"
     ]
@@ -711,8 +633,7 @@
   {
     "scope": "orgs",
     "idName": "check-blocked-user",
-    "method": "GET",
-    "path": "/orgs/:org/blocks/:username",
+    "route": "GET /orgs/:org/blocks/:username",
     "params": [
       "org",
       "username"
@@ -721,8 +642,7 @@
   {
     "scope": "orgs",
     "idName": "block-user",
-    "method": "PUT",
-    "path": "/orgs/:org/blocks/:username",
+    "route": "PUT /orgs/:org/blocks/:username",
     "params": [
       "org",
       "username"
@@ -731,8 +651,7 @@
   {
     "scope": "orgs",
     "idName": "unblock-user",
-    "method": "DELETE",
-    "path": "/orgs/:org/blocks/:username",
+    "route": "DELETE /orgs/:org/blocks/:username",
     "params": [
       "org",
       "username"
@@ -741,8 +660,7 @@
   {
     "scope": "activity",
     "idName": "list-public-events-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/events",
+    "route": "GET /orgs/:org/events",
     "params": [
       "org"
     ]
@@ -750,8 +668,7 @@
   {
     "scope": "orgs",
     "idName": "list-hooks",
-    "method": "GET",
-    "path": "/orgs/:org/hooks",
+    "route": "GET /orgs/:org/hooks",
     "params": [
       "org"
     ]
@@ -759,8 +676,7 @@
   {
     "scope": "orgs",
     "idName": "create-hook",
-    "method": "POST",
-    "path": "/orgs/:org/hooks",
+    "route": "POST /orgs/:org/hooks",
     "params": [
       "org",
       "name",
@@ -770,8 +686,7 @@
   {
     "scope": "orgs",
     "idName": "get-hook",
-    "method": "GET",
-    "path": "/orgs/:org/hooks/:hook_id",
+    "route": "GET /orgs/:org/hooks/:hook_id",
     "params": [
       "org",
       "hook_id"
@@ -780,8 +695,7 @@
   {
     "scope": "orgs",
     "idName": "edit-hook",
-    "method": "PATCH",
-    "path": "/orgs/:org/hooks/:hook_id",
+    "route": "PATCH /orgs/:org/hooks/:hook_id",
     "params": [
       "org",
       "hook_id"
@@ -790,8 +704,7 @@
   {
     "scope": "orgs",
     "idName": "delete-hook",
-    "method": "DELETE",
-    "path": "/orgs/:org/hooks/:hook_id",
+    "route": "DELETE /orgs/:org/hooks/:hook_id",
     "params": [
       "org",
       "hook_id"
@@ -800,8 +713,7 @@
   {
     "scope": "orgs",
     "idName": "ping-hook",
-    "method": "POST",
-    "path": "/orgs/:org/hooks/:hook_id/pings",
+    "route": "POST /orgs/:org/hooks/:hook_id/pings",
     "params": [
       "org",
       "hook_id"
@@ -810,8 +722,7 @@
   {
     "scope": "apps",
     "idName": "find-org-installation",
-    "method": "GET",
-    "path": "/orgs/:org/installation",
+    "route": "GET /orgs/:org/installation",
     "params": [
       "org"
     ],
@@ -822,8 +733,7 @@
   {
     "scope": "interactions",
     "idName": "get-restrictions-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/interaction-limits",
+    "route": "GET /orgs/:org/interaction-limits",
     "params": [
       "org"
     ],
@@ -834,8 +744,7 @@
   {
     "scope": "interactions",
     "idName": "add-or-update-restrictions-for-org",
-    "method": "PUT",
-    "path": "/orgs/:org/interaction-limits",
+    "route": "PUT /orgs/:org/interaction-limits",
     "params": [
       "org",
       "limit"
@@ -847,8 +756,7 @@
   {
     "scope": "interactions",
     "idName": "remove-restrictions-for-org",
-    "method": "DELETE",
-    "path": "/orgs/:org/interaction-limits",
+    "route": "DELETE /orgs/:org/interaction-limits",
     "params": [
       "org"
     ],
@@ -859,8 +767,7 @@
   {
     "scope": "orgs",
     "idName": "list-pending-invitations",
-    "method": "GET",
-    "path": "/orgs/:org/invitations",
+    "route": "GET /orgs/:org/invitations",
     "params": [
       "org"
     ]
@@ -868,8 +775,7 @@
   {
     "scope": "orgs",
     "idName": "create-invitation",
-    "method": "POST",
-    "path": "/orgs/:org/invitations",
+    "route": "POST /orgs/:org/invitations",
     "params": [
       "org"
     ]
@@ -877,8 +783,7 @@
   {
     "scope": "orgs",
     "idName": "list-invitation-teams",
-    "method": "GET",
-    "path": "/orgs/:org/invitations/:invitation_id/teams",
+    "route": "GET /orgs/:org/invitations/:invitation_id/teams",
     "params": [
       "org",
       "invitation_id"
@@ -887,8 +792,7 @@
   {
     "scope": "issues",
     "idName": "list-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/issues",
+    "route": "GET /orgs/:org/issues",
     "params": [
       "org"
     ]
@@ -896,8 +800,7 @@
   {
     "scope": "orgs",
     "idName": "list-members",
-    "method": "GET",
-    "path": "/orgs/:org/members",
+    "route": "GET /orgs/:org/members",
     "params": [
       "org"
     ]
@@ -905,8 +808,7 @@
   {
     "scope": "orgs",
     "idName": "check-membership",
-    "method": "GET",
-    "path": "/orgs/:org/members/:username",
+    "route": "GET /orgs/:org/members/:username",
     "params": [
       "org",
       "username"
@@ -915,8 +817,7 @@
   {
     "scope": "orgs",
     "idName": "remove-member",
-    "method": "DELETE",
-    "path": "/orgs/:org/members/:username",
+    "route": "DELETE /orgs/:org/members/:username",
     "params": [
       "org",
       "username"
@@ -925,8 +826,7 @@
   {
     "scope": "orgs",
     "idName": "get-membership",
-    "method": "GET",
-    "path": "/orgs/:org/memberships/:username",
+    "route": "GET /orgs/:org/memberships/:username",
     "params": [
       "org",
       "username"
@@ -935,8 +835,7 @@
   {
     "scope": "orgs",
     "idName": "add-or-update-membership",
-    "method": "PUT",
-    "path": "/orgs/:org/memberships/:username",
+    "route": "PUT /orgs/:org/memberships/:username",
     "params": [
       "org",
       "username"
@@ -945,8 +844,7 @@
   {
     "scope": "orgs",
     "idName": "remove-membership",
-    "method": "DELETE",
-    "path": "/orgs/:org/memberships/:username",
+    "route": "DELETE /orgs/:org/memberships/:username",
     "params": [
       "org",
       "username"
@@ -955,8 +853,7 @@
   {
     "scope": "migrations",
     "idName": "list-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/migrations",
+    "route": "GET /orgs/:org/migrations",
     "params": [
       "org"
     ],
@@ -967,8 +864,7 @@
   {
     "scope": "migrations",
     "idName": "start-for-org",
-    "method": "POST",
-    "path": "/orgs/:org/migrations",
+    "route": "POST /orgs/:org/migrations",
     "params": [
       "org",
       "repositories"
@@ -977,8 +873,7 @@
   {
     "scope": "migrations",
     "idName": "get-status-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/migrations/:migration_id",
+    "route": "GET /orgs/:org/migrations/:migration_id",
     "params": [
       "org",
       "migration_id"
@@ -990,8 +885,7 @@
   {
     "scope": "migrations",
     "idName": "get-archive-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/migrations/:migration_id/archive",
+    "route": "GET /orgs/:org/migrations/:migration_id/archive",
     "params": [
       "org",
       "migration_id"
@@ -1003,8 +897,7 @@
   {
     "scope": "migrations",
     "idName": "delete-archive-for-org",
-    "method": "DELETE",
-    "path": "/orgs/:org/migrations/:migration_id/archive",
+    "route": "DELETE /orgs/:org/migrations/:migration_id/archive",
     "params": [
       "org",
       "migration_id"
@@ -1016,8 +909,7 @@
   {
     "scope": "migrations",
     "idName": "unlock-repo-for-org",
-    "method": "DELETE",
-    "path": "/orgs/:org/migrations/:migration_id/repos/:repo_name/lock",
+    "route": "DELETE /orgs/:org/migrations/:migration_id/repos/:repo_name/lock",
     "params": [
       "org",
       "migration_id",
@@ -1030,8 +922,7 @@
   {
     "scope": "orgs",
     "idName": "list-outside-collaborators",
-    "method": "GET",
-    "path": "/orgs/:org/outside_collaborators",
+    "route": "GET /orgs/:org/outside_collaborators",
     "params": [
       "org"
     ]
@@ -1039,8 +930,7 @@
   {
     "scope": "orgs",
     "idName": "convert-member-to-outside-collaborator",
-    "method": "PUT",
-    "path": "/orgs/:org/outside_collaborators/:username",
+    "route": "PUT /orgs/:org/outside_collaborators/:username",
     "params": [
       "org",
       "username"
@@ -1049,8 +939,7 @@
   {
     "scope": "orgs",
     "idName": "remove-outside-collaborator",
-    "method": "DELETE",
-    "path": "/orgs/:org/outside_collaborators/:username",
+    "route": "DELETE /orgs/:org/outside_collaborators/:username",
     "params": [
       "org",
       "username"
@@ -1059,8 +948,7 @@
   {
     "scope": "projects",
     "idName": "list-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/projects",
+    "route": "GET /orgs/:org/projects",
     "params": [
       "org"
     ],
@@ -1071,8 +959,7 @@
   {
     "scope": "projects",
     "idName": "create-for-org",
-    "method": "POST",
-    "path": "/orgs/:org/projects",
+    "route": "POST /orgs/:org/projects",
     "params": [
       "org",
       "name"
@@ -1084,8 +971,7 @@
   {
     "scope": "orgs",
     "idName": "list-public-members",
-    "method": "GET",
-    "path": "/orgs/:org/public_members",
+    "route": "GET /orgs/:org/public_members",
     "params": [
       "org"
     ]
@@ -1093,8 +979,7 @@
   {
     "scope": "orgs",
     "idName": "check-public-membership",
-    "method": "GET",
-    "path": "/orgs/:org/public_members/:username",
+    "route": "GET /orgs/:org/public_members/:username",
     "params": [
       "org",
       "username"
@@ -1103,8 +988,7 @@
   {
     "scope": "orgs",
     "idName": "publicize-membership",
-    "method": "PUT",
-    "path": "/orgs/:org/public_members/:username",
+    "route": "PUT /orgs/:org/public_members/:username",
     "params": [
       "org",
       "username"
@@ -1113,8 +997,7 @@
   {
     "scope": "orgs",
     "idName": "conceal-membership",
-    "method": "DELETE",
-    "path": "/orgs/:org/public_members/:username",
+    "route": "DELETE /orgs/:org/public_members/:username",
     "params": [
       "org",
       "username"
@@ -1123,8 +1006,7 @@
   {
     "scope": "repos",
     "idName": "list-for-org",
-    "method": "GET",
-    "path": "/orgs/:org/repos",
+    "route": "GET /orgs/:org/repos",
     "params": [
       "org"
     ]
@@ -1132,8 +1014,7 @@
   {
     "scope": "repos",
     "idName": "create-in-org",
-    "method": "POST",
-    "path": "/orgs/:org/repos",
+    "route": "POST /orgs/:org/repos",
     "params": [
       "org",
       "name"
@@ -1142,8 +1023,7 @@
   {
     "scope": "teams",
     "idName": "list",
-    "method": "GET",
-    "path": "/orgs/:org/teams",
+    "route": "GET /orgs/:org/teams",
     "params": [
       "org"
     ]
@@ -1151,8 +1031,7 @@
   {
     "scope": "teams",
     "idName": "create",
-    "method": "POST",
-    "path": "/orgs/:org/teams",
+    "route": "POST /orgs/:org/teams",
     "params": [
       "org",
       "name"
@@ -1161,8 +1040,7 @@
   {
     "scope": "projects",
     "idName": "get",
-    "method": "GET",
-    "path": "/projects/:project_id",
+    "route": "GET /projects/:project_id",
     "params": [
       "project_id"
     ],
@@ -1173,8 +1051,7 @@
   {
     "scope": "projects",
     "idName": "update",
-    "method": "PATCH",
-    "path": "/projects/:project_id",
+    "route": "PATCH /projects/:project_id",
     "params": [
       "project_id"
     ],
@@ -1185,8 +1062,7 @@
   {
     "scope": "projects",
     "idName": "delete",
-    "method": "DELETE",
-    "path": "/projects/:project_id",
+    "route": "DELETE /projects/:project_id",
     "params": [
       "project_id"
     ],
@@ -1197,8 +1073,7 @@
   {
     "scope": "projects",
     "idName": "list-collaborators",
-    "method": "GET",
-    "path": "/projects/:project_id/collaborators",
+    "route": "GET /projects/:project_id/collaborators",
     "params": [
       "project_id"
     ],
@@ -1209,8 +1084,7 @@
   {
     "scope": "projects",
     "idName": "add-collaborator",
-    "method": "PUT",
-    "path": "/projects/:project_id/collaborators/:username",
+    "route": "PUT /projects/:project_id/collaborators/:username",
     "params": [
       "project_id",
       "username"
@@ -1222,8 +1096,7 @@
   {
     "scope": "projects",
     "idName": "remove-collaborator",
-    "method": "DELETE",
-    "path": "/projects/:project_id/collaborators/:username",
+    "route": "DELETE /projects/:project_id/collaborators/:username",
     "params": [
       "project_id",
       "username"
@@ -1235,8 +1108,7 @@
   {
     "scope": "projects",
     "idName": "review-user-permission-level",
-    "method": "GET",
-    "path": "/projects/:project_id/collaborators/:username/permission",
+    "route": "GET /projects/:project_id/collaborators/:username/permission",
     "params": [
       "project_id",
       "username"
@@ -1248,8 +1120,7 @@
   {
     "scope": "projects",
     "idName": "list-columns",
-    "method": "GET",
-    "path": "/projects/:project_id/columns",
+    "route": "GET /projects/:project_id/columns",
     "params": [
       "project_id"
     ],
@@ -1260,8 +1131,7 @@
   {
     "scope": "projects",
     "idName": "create-column",
-    "method": "POST",
-    "path": "/projects/:project_id/columns",
+    "route": "POST /projects/:project_id/columns",
     "params": [
       "project_id",
       "name"
@@ -1273,8 +1143,7 @@
   {
     "scope": "projects",
     "idName": "get-column",
-    "method": "GET",
-    "path": "/projects/columns/:column_id",
+    "route": "GET /projects/columns/:column_id",
     "params": [
       "column_id"
     ],
@@ -1285,8 +1154,7 @@
   {
     "scope": "projects",
     "idName": "update-column",
-    "method": "PATCH",
-    "path": "/projects/columns/:column_id",
+    "route": "PATCH /projects/columns/:column_id",
     "params": [
       "column_id",
       "name"
@@ -1298,8 +1166,7 @@
   {
     "scope": "projects",
     "idName": "delete-column",
-    "method": "DELETE",
-    "path": "/projects/columns/:column_id",
+    "route": "DELETE /projects/columns/:column_id",
     "params": [
       "column_id"
     ],
@@ -1310,8 +1177,7 @@
   {
     "scope": "projects",
     "idName": "list-cards",
-    "method": "GET",
-    "path": "/projects/columns/:column_id/cards",
+    "route": "GET /projects/columns/:column_id/cards",
     "params": [
       "column_id"
     ],
@@ -1322,8 +1188,7 @@
   {
     "scope": "projects",
     "idName": "create-card",
-    "method": "POST",
-    "path": "/projects/columns/:column_id/cards",
+    "route": "POST /projects/columns/:column_id/cards",
     "params": [
       "column_id"
     ],
@@ -1334,8 +1199,7 @@
   {
     "scope": "projects",
     "idName": "move-column",
-    "method": "POST",
-    "path": "/projects/columns/:column_id/moves",
+    "route": "POST /projects/columns/:column_id/moves",
     "params": [
       "column_id",
       "position"
@@ -1347,8 +1211,7 @@
   {
     "scope": "projects",
     "idName": "get-card",
-    "method": "GET",
-    "path": "/projects/columns/cards/:card_id",
+    "route": "GET /projects/columns/cards/:card_id",
     "params": [
       "card_id"
     ],
@@ -1359,8 +1222,7 @@
   {
     "scope": "projects",
     "idName": "update-card",
-    "method": "PATCH",
-    "path": "/projects/columns/cards/:card_id",
+    "route": "PATCH /projects/columns/cards/:card_id",
     "params": [
       "card_id"
     ],
@@ -1371,8 +1233,7 @@
   {
     "scope": "projects",
     "idName": "delete-card",
-    "method": "DELETE",
-    "path": "/projects/columns/cards/:card_id",
+    "route": "DELETE /projects/columns/cards/:card_id",
     "params": [
       "card_id"
     ],
@@ -1383,8 +1244,7 @@
   {
     "scope": "projects",
     "idName": "move-card",
-    "method": "POST",
-    "path": "/projects/columns/cards/:card_id/moves",
+    "route": "POST /projects/columns/cards/:card_id/moves",
     "params": [
       "card_id",
       "position"
@@ -1396,15 +1256,13 @@
   {
     "scope": "rateLimit",
     "idName": "get",
-    "method": "GET",
-    "path": "/rate_limit",
+    "route": "GET /rate_limit",
     "params": []
   },
   {
     "scope": "reactions",
     "idName": "delete",
-    "method": "DELETE",
-    "path": "/reactions/:reaction_id",
+    "route": "DELETE /reactions/:reaction_id",
     "params": [
       "reaction_id"
     ],
@@ -1415,8 +1273,7 @@
   {
     "scope": "repos",
     "idName": "get",
-    "method": "GET",
-    "path": "/repos/:owner/:repo",
+    "route": "GET /repos/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -1425,8 +1282,7 @@
   {
     "scope": "repos",
     "idName": "edit",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo",
+    "route": "PATCH /repos/:owner/:repo",
     "params": [
       "owner",
       "repo",
@@ -1436,8 +1292,7 @@
   {
     "scope": "repos",
     "idName": "delete",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo",
+    "route": "DELETE /repos/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -1446,8 +1301,7 @@
   {
     "scope": "repos",
     "idName": "get-archive-link",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/:archive_format/:ref",
+    "route": "GET /repos/:owner/:repo/:archive_format/:ref",
     "params": [
       "owner",
       "repo",
@@ -1458,8 +1312,7 @@
   {
     "scope": "issues",
     "idName": "list-assignees",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/assignees",
+    "route": "GET /repos/:owner/:repo/assignees",
     "params": [
       "owner",
       "repo"
@@ -1468,8 +1321,7 @@
   {
     "scope": "issues",
     "idName": "check-assignee",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/assignees/:assignee",
+    "route": "GET /repos/:owner/:repo/assignees/:assignee",
     "params": [
       "owner",
       "repo",
@@ -1479,8 +1331,7 @@
   {
     "scope": "repos",
     "idName": "list-branches",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches",
+    "route": "GET /repos/:owner/:repo/branches",
     "params": [
       "owner",
       "repo"
@@ -1489,8 +1340,7 @@
   {
     "scope": "repos",
     "idName": "get-branch",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch",
+    "route": "GET /repos/:owner/:repo/branches/:branch",
     "params": [
       "owner",
       "repo",
@@ -1500,8 +1350,7 @@
   {
     "scope": "repos",
     "idName": "get-branch-protection",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection",
     "params": [
       "owner",
       "repo",
@@ -1511,8 +1360,7 @@
   {
     "scope": "repos",
     "idName": "update-branch-protection",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/branches/:branch/protection",
+    "route": "PUT /repos/:owner/:repo/branches/:branch/protection",
     "params": [
       "owner",
       "repo",
@@ -1526,8 +1374,7 @@
   {
     "scope": "repos",
     "idName": "remove-branch-protection",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection",
     "params": [
       "owner",
       "repo",
@@ -1537,8 +1384,7 @@
   {
     "scope": "repos",
     "idName": "get-protected-branch-admin-enforcement",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/enforce_admins",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins",
     "params": [
       "owner",
       "repo",
@@ -1548,8 +1394,7 @@
   {
     "scope": "repos",
     "idName": "add-protected-branch-admin-enforcement",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/enforce_admins",
+    "route": "POST /repos/:owner/:repo/branches/:branch/protection/enforce_admins",
     "params": [
       "owner",
       "repo",
@@ -1559,8 +1404,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-admin-enforcement",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/enforce_admins",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/enforce_admins",
     "params": [
       "owner",
       "repo",
@@ -1570,8 +1414,7 @@
   {
     "scope": "repos",
     "idName": "get-protected-branch-pull-request-review-enforcement",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
     "params": [
       "owner",
       "repo",
@@ -1581,8 +1424,7 @@
   {
     "scope": "repos",
     "idName": "update-protected-branch-pull-request-review-enforcement",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
+    "route": "PATCH /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
     "params": [
       "owner",
       "repo",
@@ -1592,8 +1434,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-pull-request-review-enforcement",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews",
     "params": [
       "owner",
       "repo",
@@ -1603,8 +1444,7 @@
   {
     "scope": "repos",
     "idName": "get-protected-branch-required-signatures",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_signatures",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/required_signatures",
     "params": [
       "owner",
       "repo",
@@ -1617,8 +1457,7 @@
   {
     "scope": "repos",
     "idName": "add-protected-branch-required-signatures",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_signatures",
+    "route": "POST /repos/:owner/:repo/branches/:branch/protection/required_signatures",
     "params": [
       "owner",
       "repo",
@@ -1631,8 +1470,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-required-signatures",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_signatures",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures",
     "params": [
       "owner",
       "repo",
@@ -1645,8 +1483,7 @@
   {
     "scope": "repos",
     "idName": "get-protected-branch-required-status-checks",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks",
     "params": [
       "owner",
       "repo",
@@ -1656,8 +1493,7 @@
   {
     "scope": "repos",
     "idName": "update-protected-branch-required-status-checks",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks",
+    "route": "PATCH /repos/:owner/:repo/branches/:branch/protection/required_status_checks",
     "params": [
       "owner",
       "repo",
@@ -1667,8 +1503,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-required-status-checks",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks",
     "params": [
       "owner",
       "repo",
@@ -1678,8 +1513,7 @@
   {
     "scope": "repos",
     "idName": "list-protected-branch-required-status-checks-contexts",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
     "params": [
       "owner",
       "repo",
@@ -1689,8 +1523,7 @@
   {
     "scope": "repos",
     "idName": "add-protected-branch-required-status-checks-contexts",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
+    "route": "POST /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
     "params": [
       "owner",
       "repo",
@@ -1701,8 +1534,7 @@
   {
     "scope": "repos",
     "idName": "replace-protected-branch-required-status-checks-contexts",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
+    "route": "PUT /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
     "params": [
       "owner",
       "repo",
@@ -1713,8 +1545,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-required-status-checks-contexts",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts",
     "params": [
       "owner",
       "repo",
@@ -1725,8 +1556,7 @@
   {
     "scope": "repos",
     "idName": "get-protected-branch-restrictions",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/restrictions",
     "params": [
       "owner",
       "repo",
@@ -1736,8 +1566,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-restrictions",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions",
     "params": [
       "owner",
       "repo",
@@ -1747,8 +1576,7 @@
   {
     "scope": "repos",
     "idName": "list-protected-branch-team-restrictions",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
     "params": [
       "owner",
       "repo",
@@ -1758,8 +1586,7 @@
   {
     "scope": "repos",
     "idName": "add-protected-branch-team-restrictions",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
+    "route": "POST /repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
     "params": [
       "owner",
       "repo",
@@ -1770,8 +1597,7 @@
   {
     "scope": "repos",
     "idName": "replace-protected-branch-team-restrictions",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
+    "route": "PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
     "params": [
       "owner",
       "repo",
@@ -1782,8 +1608,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-team-restrictions",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/teams",
     "params": [
       "owner",
       "repo",
@@ -1794,8 +1619,7 @@
   {
     "scope": "repos",
     "idName": "list-protected-branch-user-restrictions",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/users",
+    "route": "GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users",
     "params": [
       "owner",
       "repo",
@@ -1805,8 +1629,7 @@
   {
     "scope": "repos",
     "idName": "add-protected-branch-user-restrictions",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/users",
+    "route": "POST /repos/:owner/:repo/branches/:branch/protection/restrictions/users",
     "params": [
       "owner",
       "repo",
@@ -1817,8 +1640,7 @@
   {
     "scope": "repos",
     "idName": "replace-protected-branch-user-restrictions",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/users",
+    "route": "PUT /repos/:owner/:repo/branches/:branch/protection/restrictions/users",
     "params": [
       "owner",
       "repo",
@@ -1829,8 +1651,7 @@
   {
     "scope": "repos",
     "idName": "remove-protected-branch-user-restrictions",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/branches/:branch/protection/restrictions/users",
+    "route": "DELETE /repos/:owner/:repo/branches/:branch/protection/restrictions/users",
     "params": [
       "owner",
       "repo",
@@ -1841,8 +1662,7 @@
   {
     "scope": "checks",
     "idName": "create",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/check-runs",
+    "route": "POST /repos/:owner/:repo/check-runs",
     "params": [
       "owner",
       "repo",
@@ -1856,8 +1676,7 @@
   {
     "scope": "checks",
     "idName": "get",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/check-runs/:check_run_id",
+    "route": "GET /repos/:owner/:repo/check-runs/:check_run_id",
     "params": [
       "owner",
       "repo",
@@ -1870,8 +1689,7 @@
   {
     "scope": "checks",
     "idName": "update",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/check-runs/:check_run_id",
+    "route": "PATCH /repos/:owner/:repo/check-runs/:check_run_id",
     "params": [
       "owner",
       "repo",
@@ -1884,8 +1702,7 @@
   {
     "scope": "checks",
     "idName": "list-annotations",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/check-runs/:check_run_id/annotations",
+    "route": "GET /repos/:owner/:repo/check-runs/:check_run_id/annotations",
     "params": [
       "owner",
       "repo",
@@ -1898,8 +1715,7 @@
   {
     "scope": "checks",
     "idName": "create-suite",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/check-suites",
+    "route": "POST /repos/:owner/:repo/check-suites",
     "params": [
       "owner",
       "repo",
@@ -1912,8 +1728,7 @@
   {
     "scope": "checks",
     "idName": "get-suite",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/check-suites/:check_suite_id",
+    "route": "GET /repos/:owner/:repo/check-suites/:check_suite_id",
     "params": [
       "owner",
       "repo",
@@ -1926,8 +1741,7 @@
   {
     "scope": "checks",
     "idName": "list-for-suite",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/check-suites/:check_suite_id/check-runs",
+    "route": "GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs",
     "params": [
       "owner",
       "repo",
@@ -1940,8 +1754,7 @@
   {
     "scope": "checks",
     "idName": "rerequest-suite",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/check-suites/:check_suite_id/rerequest",
+    "route": "POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest",
     "params": [
       "owner",
       "repo",
@@ -1954,8 +1767,7 @@
   {
     "scope": "checks",
     "idName": "set-suites-preferences",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/check-suites/preferences",
+    "route": "PATCH /repos/:owner/:repo/check-suites/preferences",
     "params": [
       "owner",
       "repo"
@@ -1967,8 +1779,7 @@
   {
     "scope": "repos",
     "idName": "list-collaborators",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/collaborators",
+    "route": "GET /repos/:owner/:repo/collaborators",
     "params": [
       "owner",
       "repo"
@@ -1977,8 +1788,7 @@
   {
     "scope": "repos",
     "idName": "check-collaborator",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/collaborators/:username",
+    "route": "GET /repos/:owner/:repo/collaborators/:username",
     "params": [
       "owner",
       "repo",
@@ -1988,8 +1798,7 @@
   {
     "scope": "repos",
     "idName": "add-collaborator",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/collaborators/:username",
+    "route": "PUT /repos/:owner/:repo/collaborators/:username",
     "params": [
       "owner",
       "repo",
@@ -1999,8 +1808,7 @@
   {
     "scope": "repos",
     "idName": "remove-collaborator",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/collaborators/:username",
+    "route": "DELETE /repos/:owner/:repo/collaborators/:username",
     "params": [
       "owner",
       "repo",
@@ -2010,8 +1818,7 @@
   {
     "scope": "repos",
     "idName": "get-collaborator-permission-level",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/collaborators/:username/permission",
+    "route": "GET /repos/:owner/:repo/collaborators/:username/permission",
     "params": [
       "owner",
       "repo",
@@ -2021,8 +1828,7 @@
   {
     "scope": "repos",
     "idName": "list-commit-comments",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/comments",
+    "route": "GET /repos/:owner/:repo/comments",
     "params": [
       "owner",
       "repo"
@@ -2031,8 +1837,7 @@
   {
     "scope": "repos",
     "idName": "get-commit-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/comments/:comment_id",
+    "route": "GET /repos/:owner/:repo/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -2042,8 +1847,7 @@
   {
     "scope": "repos",
     "idName": "update-commit-comment",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/comments/:comment_id",
+    "route": "PATCH /repos/:owner/:repo/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -2054,8 +1858,7 @@
   {
     "scope": "repos",
     "idName": "delete-commit-comment",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/comments/:comment_id",
+    "route": "DELETE /repos/:owner/:repo/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -2065,8 +1868,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-commit-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/comments/:comment_id/reactions",
+    "route": "GET /repos/:owner/:repo/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -2079,8 +1881,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-commit-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/comments/:comment_id/reactions",
+    "route": "POST /repos/:owner/:repo/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -2094,8 +1895,7 @@
   {
     "scope": "repos",
     "idName": "list-commits",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits",
+    "route": "GET /repos/:owner/:repo/commits",
     "params": [
       "owner",
       "repo"
@@ -2104,8 +1904,7 @@
   {
     "scope": "repos",
     "idName": "get-commit-ref-sha",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref",
+    "route": "GET /repos/:owner/:repo/commits/:ref",
     "params": [
       "owner",
       "repo",
@@ -2115,8 +1914,7 @@
   {
     "scope": "checks",
     "idName": "list-for-ref",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref/check-runs",
+    "route": "GET /repos/:owner/:repo/commits/:ref/check-runs",
     "params": [
       "owner",
       "repo",
@@ -2129,8 +1927,7 @@
   {
     "scope": "checks",
     "idName": "list-suites-for-ref",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref/check-suites",
+    "route": "GET /repos/:owner/:repo/commits/:ref/check-suites",
     "params": [
       "owner",
       "repo",
@@ -2143,8 +1940,7 @@
   {
     "scope": "repos",
     "idName": "list-comments-for-commit",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref/comments",
+    "route": "GET /repos/:owner/:repo/commits/:ref/comments",
     "params": [
       "owner",
       "repo",
@@ -2154,8 +1950,7 @@
   {
     "scope": "repos",
     "idName": "get-combined-status-for-ref",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref/status",
+    "route": "GET /repos/:owner/:repo/commits/:ref/status",
     "params": [
       "owner",
       "repo",
@@ -2165,8 +1960,7 @@
   {
     "scope": "repos",
     "idName": "list-statuses-for-ref",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:ref/statuses",
+    "route": "GET /repos/:owner/:repo/commits/:ref/statuses",
     "params": [
       "owner",
       "repo",
@@ -2176,8 +1970,7 @@
   {
     "scope": "repos",
     "idName": "get-commit",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/commits/:sha",
+    "route": "GET /repos/:owner/:repo/commits/:sha",
     "params": [
       "owner",
       "repo",
@@ -2187,8 +1980,7 @@
   {
     "scope": "repos",
     "idName": "create-commit-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/commits/:sha/comments",
+    "route": "POST /repos/:owner/:repo/commits/:sha/comments",
     "params": [
       "owner",
       "repo",
@@ -2199,8 +1991,7 @@
   {
     "scope": "codesOfConduct",
     "idName": "get-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/community/code_of_conduct",
+    "route": "GET /repos/:owner/:repo/community/code_of_conduct",
     "params": [
       "owner",
       "repo"
@@ -2212,8 +2003,7 @@
   {
     "scope": "repos",
     "idName": "retrieve-community-profile-metrics",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/community/profile",
+    "route": "GET /repos/:owner/:repo/community/profile",
     "params": [
       "owner",
       "repo"
@@ -2222,8 +2012,7 @@
   {
     "scope": "repos",
     "idName": "compare-commits",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/compare/:base...:head",
+    "route": "GET /repos/:owner/:repo/compare/:base...:head",
     "params": [
       "owner",
       "repo",
@@ -2234,8 +2023,7 @@
   {
     "scope": "repos",
     "idName": "get-contents",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/contents/:path",
+    "route": "GET /repos/:owner/:repo/contents/:path",
     "params": [
       "owner",
       "repo",
@@ -2245,8 +2033,7 @@
   {
     "scope": "repos",
     "idName": "create-file",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/contents/:path",
+    "route": "PUT /repos/:owner/:repo/contents/:path",
     "params": [
       "owner",
       "repo",
@@ -2258,8 +2045,7 @@
   {
     "scope": "repos",
     "idName": "update-file",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/contents/:path",
+    "route": "PUT /repos/:owner/:repo/contents/:path",
     "params": [
       "owner",
       "repo",
@@ -2272,8 +2058,7 @@
   {
     "scope": "repos",
     "idName": "delete-file",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/contents/:path",
+    "route": "DELETE /repos/:owner/:repo/contents/:path",
     "params": [
       "owner",
       "repo",
@@ -2285,8 +2070,7 @@
   {
     "scope": "repos",
     "idName": "list-contributors",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/contributors",
+    "route": "GET /repos/:owner/:repo/contributors",
     "params": [
       "owner",
       "repo"
@@ -2295,8 +2079,7 @@
   {
     "scope": "repos",
     "idName": "list-deployments",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/deployments",
+    "route": "GET /repos/:owner/:repo/deployments",
     "params": [
       "owner",
       "repo"
@@ -2305,8 +2088,7 @@
   {
     "scope": "repos",
     "idName": "create-deployment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/deployments",
+    "route": "POST /repos/:owner/:repo/deployments",
     "params": [
       "owner",
       "repo",
@@ -2316,8 +2098,7 @@
   {
     "scope": "repos",
     "idName": "get-deployment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/deployments/:deployment_id",
+    "route": "GET /repos/:owner/:repo/deployments/:deployment_id",
     "params": [
       "owner",
       "repo",
@@ -2327,8 +2108,7 @@
   {
     "scope": "repos",
     "idName": "list-deployment-statuses",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/deployments/:deployment_id/statuses",
+    "route": "GET /repos/:owner/:repo/deployments/:deployment_id/statuses",
     "params": [
       "owner",
       "repo",
@@ -2338,8 +2118,7 @@
   {
     "scope": "repos",
     "idName": "create-deployment-status",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/deployments/:deployment_id/statuses",
+    "route": "POST /repos/:owner/:repo/deployments/:deployment_id/statuses",
     "params": [
       "owner",
       "repo",
@@ -2350,8 +2129,7 @@
   {
     "scope": "repos",
     "idName": "get-deployment-status",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id",
+    "route": "GET /repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id",
     "params": [
       "owner",
       "repo",
@@ -2362,8 +2140,7 @@
   {
     "scope": "repos",
     "idName": "list-downloads",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/downloads",
+    "route": "GET /repos/:owner/:repo/downloads",
     "params": [
       "owner",
       "repo"
@@ -2372,8 +2149,7 @@
   {
     "scope": "repos",
     "idName": "get-download",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/downloads/:download_id",
+    "route": "GET /repos/:owner/:repo/downloads/:download_id",
     "params": [
       "owner",
       "repo",
@@ -2383,8 +2159,7 @@
   {
     "scope": "repos",
     "idName": "delete-download",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/downloads/:download_id",
+    "route": "DELETE /repos/:owner/:repo/downloads/:download_id",
     "params": [
       "owner",
       "repo",
@@ -2394,8 +2169,7 @@
   {
     "scope": "activity",
     "idName": "list-repo-events",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/events",
+    "route": "GET /repos/:owner/:repo/events",
     "params": [
       "owner",
       "repo"
@@ -2404,8 +2178,7 @@
   {
     "scope": "repos",
     "idName": "list-forks",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/forks",
+    "route": "GET /repos/:owner/:repo/forks",
     "params": [
       "owner",
       "repo"
@@ -2414,8 +2187,7 @@
   {
     "scope": "repos",
     "idName": "create-fork",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/forks",
+    "route": "POST /repos/:owner/:repo/forks",
     "params": [
       "owner",
       "repo"
@@ -2424,8 +2196,7 @@
   {
     "scope": "git",
     "idName": "create-blob",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/git/blobs",
+    "route": "POST /repos/:owner/:repo/git/blobs",
     "params": [
       "owner",
       "repo",
@@ -2435,8 +2206,7 @@
   {
     "scope": "git",
     "idName": "get-blob",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/blobs/:file_sha",
+    "route": "GET /repos/:owner/:repo/git/blobs/:file_sha",
     "params": [
       "owner",
       "repo",
@@ -2446,8 +2216,7 @@
   {
     "scope": "git",
     "idName": "create-commit",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/git/commits",
+    "route": "POST /repos/:owner/:repo/git/commits",
     "params": [
       "owner",
       "repo",
@@ -2459,8 +2228,7 @@
   {
     "scope": "git",
     "idName": "get-commit",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/commits/:commit_sha",
+    "route": "GET /repos/:owner/:repo/git/commits/:commit_sha",
     "params": [
       "owner",
       "repo",
@@ -2470,8 +2238,7 @@
   {
     "scope": "git",
     "idName": "create-ref",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/git/refs",
+    "route": "POST /repos/:owner/:repo/git/refs",
     "params": [
       "owner",
       "repo",
@@ -2482,8 +2249,7 @@
   {
     "scope": "git",
     "idName": "list-refs",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/refs/:namespace",
+    "route": "GET /repos/:owner/:repo/git/refs/:namespace",
     "params": [
       "owner",
       "repo"
@@ -2492,8 +2258,7 @@
   {
     "scope": "git",
     "idName": "get-ref",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/refs/:ref",
+    "route": "GET /repos/:owner/:repo/git/refs/:ref",
     "params": [
       "owner",
       "repo",
@@ -2503,8 +2268,7 @@
   {
     "scope": "git",
     "idName": "update-ref",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/git/refs/:ref",
+    "route": "PATCH /repos/:owner/:repo/git/refs/:ref",
     "params": [
       "owner",
       "repo",
@@ -2515,8 +2279,7 @@
   {
     "scope": "git",
     "idName": "delete-ref",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/git/refs/:ref",
+    "route": "DELETE /repos/:owner/:repo/git/refs/:ref",
     "params": [
       "owner",
       "repo",
@@ -2526,8 +2289,7 @@
   {
     "scope": "git",
     "idName": "create-tag",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/git/tags",
+    "route": "POST /repos/:owner/:repo/git/tags",
     "params": [
       "owner",
       "repo",
@@ -2540,8 +2302,7 @@
   {
     "scope": "git",
     "idName": "get-tag",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/tags/:tag_sha",
+    "route": "GET /repos/:owner/:repo/git/tags/:tag_sha",
     "params": [
       "owner",
       "repo",
@@ -2551,8 +2312,7 @@
   {
     "scope": "git",
     "idName": "create-tree",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/git/trees",
+    "route": "POST /repos/:owner/:repo/git/trees",
     "params": [
       "owner",
       "repo",
@@ -2562,8 +2322,7 @@
   {
     "scope": "git",
     "idName": "get-tree",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/git/trees/:tree_sha",
+    "route": "GET /repos/:owner/:repo/git/trees/:tree_sha",
     "params": [
       "owner",
       "repo",
@@ -2573,8 +2332,7 @@
   {
     "scope": "repos",
     "idName": "list-hooks",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/hooks",
+    "route": "GET /repos/:owner/:repo/hooks",
     "params": [
       "owner",
       "repo"
@@ -2583,8 +2341,7 @@
   {
     "scope": "repos",
     "idName": "create-hook",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/hooks",
+    "route": "POST /repos/:owner/:repo/hooks",
     "params": [
       "owner",
       "repo",
@@ -2594,8 +2351,7 @@
   {
     "scope": "repos",
     "idName": "get-hook",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/hooks/:hook_id",
+    "route": "GET /repos/:owner/:repo/hooks/:hook_id",
     "params": [
       "owner",
       "repo",
@@ -2605,8 +2361,7 @@
   {
     "scope": "repos",
     "idName": "edit-hook",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/hooks/:hook_id",
+    "route": "PATCH /repos/:owner/:repo/hooks/:hook_id",
     "params": [
       "owner",
       "repo",
@@ -2616,8 +2371,7 @@
   {
     "scope": "repos",
     "idName": "delete-hook",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/hooks/:hook_id",
+    "route": "DELETE /repos/:owner/:repo/hooks/:hook_id",
     "params": [
       "owner",
       "repo",
@@ -2627,8 +2381,7 @@
   {
     "scope": "repos",
     "idName": "ping-hook",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/hooks/:hook_id/pings",
+    "route": "POST /repos/:owner/:repo/hooks/:hook_id/pings",
     "params": [
       "owner",
       "repo",
@@ -2638,8 +2391,7 @@
   {
     "scope": "repos",
     "idName": "test-push-hook",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/hooks/:hook_id/tests",
+    "route": "POST /repos/:owner/:repo/hooks/:hook_id/tests",
     "params": [
       "owner",
       "repo",
@@ -2649,8 +2401,7 @@
   {
     "scope": "migrations",
     "idName": "get-import-progress",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/import",
+    "route": "GET /repos/:owner/:repo/import",
     "params": [
       "owner",
       "repo"
@@ -2662,8 +2413,7 @@
   {
     "scope": "migrations",
     "idName": "update-import",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/import",
+    "route": "PATCH /repos/:owner/:repo/import",
     "params": [
       "owner",
       "repo"
@@ -2675,8 +2425,7 @@
   {
     "scope": "migrations",
     "idName": "start-import",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/import",
+    "route": "PUT /repos/:owner/:repo/import",
     "params": [
       "owner",
       "repo",
@@ -2689,8 +2438,7 @@
   {
     "scope": "migrations",
     "idName": "cancel-import",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/import",
+    "route": "DELETE /repos/:owner/:repo/import",
     "params": [
       "owner",
       "repo"
@@ -2702,8 +2450,7 @@
   {
     "scope": "migrations",
     "idName": "get-commit-authors",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/import/authors",
+    "route": "GET /repos/:owner/:repo/import/authors",
     "params": [
       "owner",
       "repo"
@@ -2715,8 +2462,7 @@
   {
     "scope": "migrations",
     "idName": "map-commit-author",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/import/authors/:author_id",
+    "route": "PATCH /repos/:owner/:repo/import/authors/:author_id",
     "params": [
       "owner",
       "repo",
@@ -2729,8 +2475,7 @@
   {
     "scope": "migrations",
     "idName": "get-large-files",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/import/large_files",
+    "route": "GET /repos/:owner/:repo/import/large_files",
     "params": [
       "owner",
       "repo"
@@ -2742,8 +2487,7 @@
   {
     "scope": "migrations",
     "idName": "set-lfs-preference",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/import/lfs",
+    "route": "PATCH /repos/:owner/:repo/import/lfs",
     "params": [
       "owner",
       "repo",
@@ -2756,8 +2500,7 @@
   {
     "scope": "apps",
     "idName": "find-repo-installation",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/installation",
+    "route": "GET /repos/:owner/:repo/installation",
     "params": [
       "owner",
       "repo"
@@ -2769,8 +2512,7 @@
   {
     "scope": "interactions",
     "idName": "get-restrictions-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/interaction-limits",
+    "route": "GET /repos/:owner/:repo/interaction-limits",
     "params": [
       "owner",
       "repo"
@@ -2782,8 +2524,7 @@
   {
     "scope": "interactions",
     "idName": "add-or-update-restrictions-for-repo",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/interaction-limits",
+    "route": "PUT /repos/:owner/:repo/interaction-limits",
     "params": [
       "owner",
       "repo",
@@ -2796,8 +2537,7 @@
   {
     "scope": "interactions",
     "idName": "remove-restrictions-for-repo",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/interaction-limits",
+    "route": "DELETE /repos/:owner/:repo/interaction-limits",
     "params": [
       "owner",
       "repo"
@@ -2809,8 +2549,7 @@
   {
     "scope": "repos",
     "idName": "list-invitations",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/invitations",
+    "route": "GET /repos/:owner/:repo/invitations",
     "params": [
       "owner",
       "repo"
@@ -2819,8 +2558,7 @@
   {
     "scope": "repos",
     "idName": "update-invitation",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/invitations/:invitation_id",
+    "route": "PATCH /repos/:owner/:repo/invitations/:invitation_id",
     "params": [
       "owner",
       "repo",
@@ -2830,8 +2568,7 @@
   {
     "scope": "repos",
     "idName": "delete-invitation",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/invitations/:invitation_id",
+    "route": "DELETE /repos/:owner/:repo/invitations/:invitation_id",
     "params": [
       "owner",
       "repo",
@@ -2841,8 +2578,7 @@
   {
     "scope": "issues",
     "idName": "list-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues",
+    "route": "GET /repos/:owner/:repo/issues",
     "params": [
       "owner",
       "repo"
@@ -2851,8 +2587,7 @@
   {
     "scope": "issues",
     "idName": "create",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues",
+    "route": "POST /repos/:owner/:repo/issues",
     "params": [
       "owner",
       "repo",
@@ -2862,8 +2597,7 @@
   {
     "scope": "issues",
     "idName": "get",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number",
+    "route": "GET /repos/:owner/:repo/issues/:number",
     "params": [
       "owner",
       "repo",
@@ -2873,8 +2607,7 @@
   {
     "scope": "issues",
     "idName": "edit",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/issues/:number",
+    "route": "PATCH /repos/:owner/:repo/issues/:number",
     "params": [
       "owner",
       "repo",
@@ -2884,8 +2617,7 @@
   {
     "scope": "issues",
     "idName": "add-assignees",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues/:number/assignees",
+    "route": "POST /repos/:owner/:repo/issues/:number/assignees",
     "params": [
       "owner",
       "repo",
@@ -2895,8 +2627,7 @@
   {
     "scope": "issues",
     "idName": "remove-assignees",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/issues/:number/assignees",
+    "route": "DELETE /repos/:owner/:repo/issues/:number/assignees",
     "params": [
       "owner",
       "repo",
@@ -2906,8 +2637,7 @@
   {
     "scope": "issues",
     "idName": "list-comments",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number/comments",
+    "route": "GET /repos/:owner/:repo/issues/:number/comments",
     "params": [
       "owner",
       "repo",
@@ -2917,8 +2647,7 @@
   {
     "scope": "issues",
     "idName": "create-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues/:number/comments",
+    "route": "POST /repos/:owner/:repo/issues/:number/comments",
     "params": [
       "owner",
       "repo",
@@ -2929,8 +2658,7 @@
   {
     "scope": "issues",
     "idName": "list-events",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number/events",
+    "route": "GET /repos/:owner/:repo/issues/:number/events",
     "params": [
       "owner",
       "repo",
@@ -2940,8 +2668,7 @@
   {
     "scope": "issues",
     "idName": "list-labels-on-issue",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number/labels",
+    "route": "GET /repos/:owner/:repo/issues/:number/labels",
     "params": [
       "owner",
       "repo",
@@ -2951,8 +2678,7 @@
   {
     "scope": "issues",
     "idName": "add-labels",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues/:number/labels",
+    "route": "POST /repos/:owner/:repo/issues/:number/labels",
     "params": [
       "owner",
       "repo",
@@ -2963,8 +2689,7 @@
   {
     "scope": "issues",
     "idName": "replace-labels",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/issues/:number/labels",
+    "route": "PUT /repos/:owner/:repo/issues/:number/labels",
     "params": [
       "owner",
       "repo",
@@ -2974,8 +2699,7 @@
   {
     "scope": "issues",
     "idName": "remove-labels",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/issues/:number/labels",
+    "route": "DELETE /repos/:owner/:repo/issues/:number/labels",
     "params": [
       "owner",
       "repo",
@@ -2985,8 +2709,7 @@
   {
     "scope": "issues",
     "idName": "remove-label",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/issues/:number/labels/:name",
+    "route": "DELETE /repos/:owner/:repo/issues/:number/labels/:name",
     "params": [
       "owner",
       "repo",
@@ -2997,8 +2720,7 @@
   {
     "scope": "issues",
     "idName": "lock",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/issues/:number/lock",
+    "route": "PUT /repos/:owner/:repo/issues/:number/lock",
     "params": [
       "owner",
       "repo",
@@ -3008,8 +2730,7 @@
   {
     "scope": "issues",
     "idName": "unlock",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/issues/:number/lock",
+    "route": "DELETE /repos/:owner/:repo/issues/:number/lock",
     "params": [
       "owner",
       "repo",
@@ -3019,8 +2740,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-issue",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number/reactions",
+    "route": "GET /repos/:owner/:repo/issues/:number/reactions",
     "params": [
       "owner",
       "repo",
@@ -3033,8 +2753,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-issue",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues/:number/reactions",
+    "route": "POST /repos/:owner/:repo/issues/:number/reactions",
     "params": [
       "owner",
       "repo",
@@ -3048,8 +2767,7 @@
   {
     "scope": "issues",
     "idName": "list-events-for-timeline",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/:number/timeline",
+    "route": "GET /repos/:owner/:repo/issues/:number/timeline",
     "params": [
       "owner",
       "repo",
@@ -3062,8 +2780,7 @@
   {
     "scope": "issues",
     "idName": "list-comments-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/comments",
+    "route": "GET /repos/:owner/:repo/issues/comments",
     "params": [
       "owner",
       "repo"
@@ -3072,8 +2789,7 @@
   {
     "scope": "issues",
     "idName": "get-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/comments/:comment_id",
+    "route": "GET /repos/:owner/:repo/issues/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3083,8 +2799,7 @@
   {
     "scope": "issues",
     "idName": "edit-comment",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/issues/comments/:comment_id",
+    "route": "PATCH /repos/:owner/:repo/issues/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3095,8 +2810,7 @@
   {
     "scope": "issues",
     "idName": "delete-comment",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/issues/comments/:comment_id",
+    "route": "DELETE /repos/:owner/:repo/issues/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3106,8 +2820,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-issue-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/comments/:comment_id/reactions",
+    "route": "GET /repos/:owner/:repo/issues/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -3120,8 +2833,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-issue-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/issues/comments/:comment_id/reactions",
+    "route": "POST /repos/:owner/:repo/issues/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -3135,8 +2847,7 @@
   {
     "scope": "issues",
     "idName": "list-events-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/events",
+    "route": "GET /repos/:owner/:repo/issues/events",
     "params": [
       "owner",
       "repo"
@@ -3145,8 +2856,7 @@
   {
     "scope": "issues",
     "idName": "get-event",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/issues/events/:event_id",
+    "route": "GET /repos/:owner/:repo/issues/events/:event_id",
     "params": [
       "owner",
       "repo",
@@ -3156,8 +2866,7 @@
   {
     "scope": "repos",
     "idName": "list-deploy-keys",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/keys",
+    "route": "GET /repos/:owner/:repo/keys",
     "params": [
       "owner",
       "repo"
@@ -3166,8 +2875,7 @@
   {
     "scope": "repos",
     "idName": "add-deploy-key",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/keys",
+    "route": "POST /repos/:owner/:repo/keys",
     "params": [
       "owner",
       "repo",
@@ -3177,8 +2885,7 @@
   {
     "scope": "repos",
     "idName": "get-deploy-key",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/keys/:key_id",
+    "route": "GET /repos/:owner/:repo/keys/:key_id",
     "params": [
       "owner",
       "repo",
@@ -3188,8 +2895,7 @@
   {
     "scope": "repos",
     "idName": "remove-deploy-key",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/keys/:key_id",
+    "route": "DELETE /repos/:owner/:repo/keys/:key_id",
     "params": [
       "owner",
       "repo",
@@ -3199,8 +2905,7 @@
   {
     "scope": "issues",
     "idName": "list-labels-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/labels",
+    "route": "GET /repos/:owner/:repo/labels",
     "params": [
       "owner",
       "repo"
@@ -3209,8 +2914,7 @@
   {
     "scope": "issues",
     "idName": "create-label",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/labels",
+    "route": "POST /repos/:owner/:repo/labels",
     "params": [
       "owner",
       "repo",
@@ -3221,8 +2925,7 @@
   {
     "scope": "issues",
     "idName": "update-label",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/labels/:current_name",
+    "route": "PATCH /repos/:owner/:repo/labels/:current_name",
     "params": [
       "owner",
       "repo",
@@ -3232,8 +2935,7 @@
   {
     "scope": "issues",
     "idName": "get-label",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/labels/:name",
+    "route": "GET /repos/:owner/:repo/labels/:name",
     "params": [
       "owner",
       "repo",
@@ -3243,8 +2945,7 @@
   {
     "scope": "issues",
     "idName": "delete-label",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/labels/:name",
+    "route": "DELETE /repos/:owner/:repo/labels/:name",
     "params": [
       "owner",
       "repo",
@@ -3254,8 +2955,7 @@
   {
     "scope": "repos",
     "idName": "list-languages",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/languages",
+    "route": "GET /repos/:owner/:repo/languages",
     "params": [
       "owner",
       "repo"
@@ -3264,8 +2964,7 @@
   {
     "scope": "licenses",
     "idName": "get-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/license",
+    "route": "GET /repos/:owner/:repo/license",
     "params": [
       "owner",
       "repo"
@@ -3274,8 +2973,7 @@
   {
     "scope": "repos",
     "idName": "merge",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/merges",
+    "route": "POST /repos/:owner/:repo/merges",
     "params": [
       "owner",
       "repo",
@@ -3286,8 +2984,7 @@
   {
     "scope": "issues",
     "idName": "list-milestones-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/milestones",
+    "route": "GET /repos/:owner/:repo/milestones",
     "params": [
       "owner",
       "repo"
@@ -3296,8 +2993,7 @@
   {
     "scope": "issues",
     "idName": "create-milestone",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/milestones",
+    "route": "POST /repos/:owner/:repo/milestones",
     "params": [
       "owner",
       "repo",
@@ -3307,8 +3003,7 @@
   {
     "scope": "issues",
     "idName": "get-milestone",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/milestones/:number",
+    "route": "GET /repos/:owner/:repo/milestones/:number",
     "params": [
       "owner",
       "repo",
@@ -3318,8 +3013,7 @@
   {
     "scope": "issues",
     "idName": "update-milestone",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/milestones/:number",
+    "route": "PATCH /repos/:owner/:repo/milestones/:number",
     "params": [
       "owner",
       "repo",
@@ -3329,8 +3023,7 @@
   {
     "scope": "issues",
     "idName": "delete-milestone",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/milestones/:number",
+    "route": "DELETE /repos/:owner/:repo/milestones/:number",
     "params": [
       "owner",
       "repo",
@@ -3340,8 +3033,7 @@
   {
     "scope": "issues",
     "idName": "list-labels-for-milestone",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/milestones/:number/labels",
+    "route": "GET /repos/:owner/:repo/milestones/:number/labels",
     "params": [
       "owner",
       "repo",
@@ -3351,8 +3043,7 @@
   {
     "scope": "activity",
     "idName": "list-notifications-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/notifications",
+    "route": "GET /repos/:owner/:repo/notifications",
     "params": [
       "owner",
       "repo"
@@ -3361,8 +3052,7 @@
   {
     "scope": "activity",
     "idName": "mark-notifications-as-read-for-repo",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/notifications",
+    "route": "PUT /repos/:owner/:repo/notifications",
     "params": [
       "owner",
       "repo"
@@ -3371,8 +3061,7 @@
   {
     "scope": "repos",
     "idName": "get-pages",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pages",
+    "route": "GET /repos/:owner/:repo/pages",
     "params": [
       "owner",
       "repo"
@@ -3381,8 +3070,7 @@
   {
     "scope": "repos",
     "idName": "enable-pages-site",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pages",
+    "route": "POST /repos/:owner/:repo/pages",
     "params": [
       "owner",
       "repo"
@@ -3394,8 +3082,7 @@
   {
     "scope": "repos",
     "idName": "update-information-about-pages-site",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/pages",
+    "route": "PUT /repos/:owner/:repo/pages",
     "params": [
       "owner",
       "repo"
@@ -3404,8 +3091,7 @@
   {
     "scope": "repos",
     "idName": "disable-pages-site",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/pages",
+    "route": "DELETE /repos/:owner/:repo/pages",
     "params": [
       "owner",
       "repo"
@@ -3417,8 +3103,7 @@
   {
     "scope": "repos",
     "idName": "list-pages-builds",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pages/builds",
+    "route": "GET /repos/:owner/:repo/pages/builds",
     "params": [
       "owner",
       "repo"
@@ -3427,8 +3112,7 @@
   {
     "scope": "repos",
     "idName": "request-page-build",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pages/builds",
+    "route": "POST /repos/:owner/:repo/pages/builds",
     "params": [
       "owner",
       "repo"
@@ -3440,8 +3124,7 @@
   {
     "scope": "repos",
     "idName": "get-pages-build",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pages/builds/:build_id",
+    "route": "GET /repos/:owner/:repo/pages/builds/:build_id",
     "params": [
       "owner",
       "repo",
@@ -3451,8 +3134,7 @@
   {
     "scope": "repos",
     "idName": "get-latest-pages-build",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pages/builds/latest",
+    "route": "GET /repos/:owner/:repo/pages/builds/latest",
     "params": [
       "owner",
       "repo"
@@ -3461,8 +3143,7 @@
   {
     "scope": "projects",
     "idName": "list-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/projects",
+    "route": "GET /repos/:owner/:repo/projects",
     "params": [
       "owner",
       "repo"
@@ -3474,8 +3155,7 @@
   {
     "scope": "projects",
     "idName": "create-for-repo",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/projects",
+    "route": "POST /repos/:owner/:repo/projects",
     "params": [
       "owner",
       "repo",
@@ -3488,8 +3168,7 @@
   {
     "scope": "pulls",
     "idName": "list",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls",
+    "route": "GET /repos/:owner/:repo/pulls",
     "params": [
       "owner",
       "repo"
@@ -3498,8 +3177,7 @@
   {
     "scope": "pulls",
     "idName": "create",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls",
+    "route": "POST /repos/:owner/:repo/pulls",
     "params": [
       "owner",
       "repo",
@@ -3511,8 +3189,7 @@
   {
     "scope": "pulls",
     "idName": "create-from-issue",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls",
+    "route": "POST /repos/:owner/:repo/pulls",
     "params": [
       "owner",
       "repo",
@@ -3524,8 +3201,7 @@
   {
     "scope": "pulls",
     "idName": "get",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number",
+    "route": "GET /repos/:owner/:repo/pulls/:number",
     "params": [
       "owner",
       "repo",
@@ -3535,8 +3211,7 @@
   {
     "scope": "pulls",
     "idName": "update",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/pulls/:number",
+    "route": "PATCH /repos/:owner/:repo/pulls/:number",
     "params": [
       "owner",
       "repo",
@@ -3546,8 +3221,7 @@
   {
     "scope": "pulls",
     "idName": "list-comments",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/comments",
+    "route": "GET /repos/:owner/:repo/pulls/:number/comments",
     "params": [
       "owner",
       "repo",
@@ -3557,8 +3231,7 @@
   {
     "scope": "pulls",
     "idName": "create-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/:number/comments",
+    "route": "POST /repos/:owner/:repo/pulls/:number/comments",
     "params": [
       "owner",
       "repo",
@@ -3572,8 +3245,7 @@
   {
     "scope": "pulls",
     "idName": "create-comment-reply",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/:number/comments",
+    "route": "POST /repos/:owner/:repo/pulls/:number/comments",
     "params": [
       "owner",
       "repo",
@@ -3585,8 +3257,7 @@
   {
     "scope": "pulls",
     "idName": "list-commits",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/commits",
+    "route": "GET /repos/:owner/:repo/pulls/:number/commits",
     "params": [
       "owner",
       "repo",
@@ -3596,8 +3267,7 @@
   {
     "scope": "pulls",
     "idName": "list-files",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/files",
+    "route": "GET /repos/:owner/:repo/pulls/:number/files",
     "params": [
       "owner",
       "repo",
@@ -3607,8 +3277,7 @@
   {
     "scope": "pulls",
     "idName": "check-if-merged",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/merge",
+    "route": "GET /repos/:owner/:repo/pulls/:number/merge",
     "params": [
       "owner",
       "repo",
@@ -3618,8 +3287,7 @@
   {
     "scope": "pulls",
     "idName": "merge",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/pulls/:number/merge",
+    "route": "PUT /repos/:owner/:repo/pulls/:number/merge",
     "params": [
       "owner",
       "repo",
@@ -3629,8 +3297,7 @@
   {
     "scope": "pulls",
     "idName": "list-review-requests",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/requested_reviewers",
+    "route": "GET /repos/:owner/:repo/pulls/:number/requested_reviewers",
     "params": [
       "owner",
       "repo",
@@ -3640,8 +3307,7 @@
   {
     "scope": "pulls",
     "idName": "create-review-request",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/:number/requested_reviewers",
+    "route": "POST /repos/:owner/:repo/pulls/:number/requested_reviewers",
     "params": [
       "owner",
       "repo",
@@ -3651,8 +3317,7 @@
   {
     "scope": "pulls",
     "idName": "delete-review-request",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/pulls/:number/requested_reviewers",
+    "route": "DELETE /repos/:owner/:repo/pulls/:number/requested_reviewers",
     "params": [
       "owner",
       "repo",
@@ -3662,8 +3327,7 @@
   {
     "scope": "pulls",
     "idName": "list-reviews",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews",
+    "route": "GET /repos/:owner/:repo/pulls/:number/reviews",
     "params": [
       "owner",
       "repo",
@@ -3673,8 +3337,7 @@
   {
     "scope": "pulls",
     "idName": "create-review",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews",
+    "route": "POST /repos/:owner/:repo/pulls/:number/reviews",
     "params": [
       "owner",
       "repo",
@@ -3684,8 +3347,7 @@
   {
     "scope": "pulls",
     "idName": "get-review",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id",
+    "route": "GET /repos/:owner/:repo/pulls/:number/reviews/:review_id",
     "params": [
       "owner",
       "repo",
@@ -3696,8 +3358,7 @@
   {
     "scope": "pulls",
     "idName": "update-review",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id",
+    "route": "PUT /repos/:owner/:repo/pulls/:number/reviews/:review_id",
     "params": [
       "owner",
       "repo",
@@ -3709,8 +3370,7 @@
   {
     "scope": "pulls",
     "idName": "delete-pending-review",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id",
+    "route": "DELETE /repos/:owner/:repo/pulls/:number/reviews/:review_id",
     "params": [
       "owner",
       "repo",
@@ -3721,8 +3381,7 @@
   {
     "scope": "pulls",
     "idName": "get-comments-for-review",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id/comments",
+    "route": "GET /repos/:owner/:repo/pulls/:number/reviews/:review_id/comments",
     "params": [
       "owner",
       "repo",
@@ -3733,8 +3392,7 @@
   {
     "scope": "pulls",
     "idName": "dismiss-review",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id/dismissals",
+    "route": "PUT /repos/:owner/:repo/pulls/:number/reviews/:review_id/dismissals",
     "params": [
       "owner",
       "repo",
@@ -3746,8 +3404,7 @@
   {
     "scope": "pulls",
     "idName": "submit-review",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/:number/reviews/:review_id/events",
+    "route": "POST /repos/:owner/:repo/pulls/:number/reviews/:review_id/events",
     "params": [
       "owner",
       "repo",
@@ -3759,8 +3416,7 @@
   {
     "scope": "pulls",
     "idName": "list-comments-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/comments",
+    "route": "GET /repos/:owner/:repo/pulls/comments",
     "params": [
       "owner",
       "repo"
@@ -3769,8 +3425,7 @@
   {
     "scope": "pulls",
     "idName": "get-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/comments/:comment_id",
+    "route": "GET /repos/:owner/:repo/pulls/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3780,8 +3435,7 @@
   {
     "scope": "pulls",
     "idName": "edit-comment",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/pulls/comments/:comment_id",
+    "route": "PATCH /repos/:owner/:repo/pulls/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3792,8 +3446,7 @@
   {
     "scope": "pulls",
     "idName": "delete-comment",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/pulls/comments/:comment_id",
+    "route": "DELETE /repos/:owner/:repo/pulls/comments/:comment_id",
     "params": [
       "owner",
       "repo",
@@ -3803,8 +3456,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-pull-request-review-comment",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/pulls/comments/:comment_id/reactions",
+    "route": "GET /repos/:owner/:repo/pulls/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -3817,8 +3469,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-pull-request-review-comment",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/pulls/comments/:comment_id/reactions",
+    "route": "POST /repos/:owner/:repo/pulls/comments/:comment_id/reactions",
     "params": [
       "owner",
       "repo",
@@ -3832,8 +3483,7 @@
   {
     "scope": "repos",
     "idName": "get-readme",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/readme",
+    "route": "GET /repos/:owner/:repo/readme",
     "params": [
       "owner",
       "repo"
@@ -3842,8 +3492,7 @@
   {
     "scope": "repos",
     "idName": "list-releases",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases",
+    "route": "GET /repos/:owner/:repo/releases",
     "params": [
       "owner",
       "repo"
@@ -3852,8 +3501,7 @@
   {
     "scope": "repos",
     "idName": "create-release",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/releases",
+    "route": "POST /repos/:owner/:repo/releases",
     "params": [
       "owner",
       "repo",
@@ -3863,8 +3511,7 @@
   {
     "scope": "repos",
     "idName": "get-release",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases/:release_id",
+    "route": "GET /repos/:owner/:repo/releases/:release_id",
     "params": [
       "owner",
       "repo",
@@ -3874,8 +3521,7 @@
   {
     "scope": "repos",
     "idName": "edit-release",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/releases/:release_id",
+    "route": "PATCH /repos/:owner/:repo/releases/:release_id",
     "params": [
       "owner",
       "repo",
@@ -3885,8 +3531,7 @@
   {
     "scope": "repos",
     "idName": "delete-release",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/releases/:release_id",
+    "route": "DELETE /repos/:owner/:repo/releases/:release_id",
     "params": [
       "owner",
       "repo",
@@ -3896,8 +3541,7 @@
   {
     "scope": "repos",
     "idName": "list-assets-for-release",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases/:release_id/assets",
+    "route": "GET /repos/:owner/:repo/releases/:release_id/assets",
     "params": [
       "owner",
       "repo",
@@ -3907,8 +3551,7 @@
   {
     "scope": "repos",
     "idName": "get-release-asset",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases/assets/:asset_id",
+    "route": "GET /repos/:owner/:repo/releases/assets/:asset_id",
     "params": [
       "owner",
       "repo",
@@ -3918,8 +3561,7 @@
   {
     "scope": "repos",
     "idName": "edit-release-asset",
-    "method": "PATCH",
-    "path": "/repos/:owner/:repo/releases/assets/:asset_id",
+    "route": "PATCH /repos/:owner/:repo/releases/assets/:asset_id",
     "params": [
       "owner",
       "repo",
@@ -3929,8 +3571,7 @@
   {
     "scope": "repos",
     "idName": "delete-release-asset",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/releases/assets/:asset_id",
+    "route": "DELETE /repos/:owner/:repo/releases/assets/:asset_id",
     "params": [
       "owner",
       "repo",
@@ -3940,8 +3581,7 @@
   {
     "scope": "repos",
     "idName": "get-latest-release",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases/latest",
+    "route": "GET /repos/:owner/:repo/releases/latest",
     "params": [
       "owner",
       "repo"
@@ -3950,8 +3590,7 @@
   {
     "scope": "repos",
     "idName": "get-release-by-tag",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/releases/tags/:tag",
+    "route": "GET /repos/:owner/:repo/releases/tags/:tag",
     "params": [
       "owner",
       "repo",
@@ -3961,8 +3600,7 @@
   {
     "scope": "activity",
     "idName": "list-stargazers-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stargazers",
+    "route": "GET /repos/:owner/:repo/stargazers",
     "params": [
       "owner",
       "repo"
@@ -3971,8 +3609,7 @@
   {
     "scope": "repos",
     "idName": "get-code-frequency-stats",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stats/code_frequency",
+    "route": "GET /repos/:owner/:repo/stats/code_frequency",
     "params": [
       "owner",
       "repo"
@@ -3981,8 +3618,7 @@
   {
     "scope": "repos",
     "idName": "get-commit-activity-stats",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stats/commit_activity",
+    "route": "GET /repos/:owner/:repo/stats/commit_activity",
     "params": [
       "owner",
       "repo"
@@ -3991,8 +3627,7 @@
   {
     "scope": "repos",
     "idName": "get-contributors-stats",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stats/contributors",
+    "route": "GET /repos/:owner/:repo/stats/contributors",
     "params": [
       "owner",
       "repo"
@@ -4001,8 +3636,7 @@
   {
     "scope": "repos",
     "idName": "get-participation-stats",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stats/participation",
+    "route": "GET /repos/:owner/:repo/stats/participation",
     "params": [
       "owner",
       "repo"
@@ -4011,8 +3645,7 @@
   {
     "scope": "repos",
     "idName": "get-punch-card-stats",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/stats/punch_card",
+    "route": "GET /repos/:owner/:repo/stats/punch_card",
     "params": [
       "owner",
       "repo"
@@ -4021,8 +3654,7 @@
   {
     "scope": "repos",
     "idName": "create-status",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/statuses/:sha",
+    "route": "POST /repos/:owner/:repo/statuses/:sha",
     "params": [
       "owner",
       "repo",
@@ -4033,8 +3665,7 @@
   {
     "scope": "activity",
     "idName": "list-watchers-for-repo",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/subscribers",
+    "route": "GET /repos/:owner/:repo/subscribers",
     "params": [
       "owner",
       "repo"
@@ -4043,8 +3674,7 @@
   {
     "scope": "activity",
     "idName": "get-repo-subscription",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/subscription",
+    "route": "GET /repos/:owner/:repo/subscription",
     "params": [
       "owner",
       "repo"
@@ -4053,8 +3683,7 @@
   {
     "scope": "activity",
     "idName": "set-repo-subscription",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/subscription",
+    "route": "PUT /repos/:owner/:repo/subscription",
     "params": [
       "owner",
       "repo"
@@ -4063,8 +3692,7 @@
   {
     "scope": "activity",
     "idName": "delete-repo-subscription",
-    "method": "DELETE",
-    "path": "/repos/:owner/:repo/subscription",
+    "route": "DELETE /repos/:owner/:repo/subscription",
     "params": [
       "owner",
       "repo"
@@ -4073,8 +3701,7 @@
   {
     "scope": "repos",
     "idName": "list-tags",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/tags",
+    "route": "GET /repos/:owner/:repo/tags",
     "params": [
       "owner",
       "repo"
@@ -4083,8 +3710,7 @@
   {
     "scope": "repos",
     "idName": "list-teams",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/teams",
+    "route": "GET /repos/:owner/:repo/teams",
     "params": [
       "owner",
       "repo"
@@ -4093,8 +3719,7 @@
   {
     "scope": "repos",
     "idName": "list-topics",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/topics",
+    "route": "GET /repos/:owner/:repo/topics",
     "params": [
       "owner",
       "repo"
@@ -4103,8 +3728,7 @@
   {
     "scope": "repos",
     "idName": "replace-topics",
-    "method": "PUT",
-    "path": "/repos/:owner/:repo/topics",
+    "route": "PUT /repos/:owner/:repo/topics",
     "params": [
       "owner",
       "repo",
@@ -4114,8 +3738,7 @@
   {
     "scope": "repos",
     "idName": "get-clones",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/traffic/clones",
+    "route": "GET /repos/:owner/:repo/traffic/clones",
     "params": [
       "owner",
       "repo"
@@ -4124,8 +3747,7 @@
   {
     "scope": "repos",
     "idName": "get-top-paths",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/traffic/popular/paths",
+    "route": "GET /repos/:owner/:repo/traffic/popular/paths",
     "params": [
       "owner",
       "repo"
@@ -4134,8 +3756,7 @@
   {
     "scope": "repos",
     "idName": "get-top-referrers",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/traffic/popular/referrers",
+    "route": "GET /repos/:owner/:repo/traffic/popular/referrers",
     "params": [
       "owner",
       "repo"
@@ -4144,8 +3765,7 @@
   {
     "scope": "repos",
     "idName": "get-views",
-    "method": "GET",
-    "path": "/repos/:owner/:repo/traffic/views",
+    "route": "GET /repos/:owner/:repo/traffic/views",
     "params": [
       "owner",
       "repo"
@@ -4154,8 +3774,7 @@
   {
     "scope": "repos",
     "idName": "transfer",
-    "method": "POST",
-    "path": "/repos/:owner/:repo/transfer",
+    "route": "POST /repos/:owner/:repo/transfer",
     "params": [
       "owner",
       "repo"
@@ -4167,15 +3786,13 @@
   {
     "scope": "repos",
     "idName": "list-public",
-    "method": "GET",
-    "path": "/repositories",
+    "route": "GET /repositories",
     "params": []
   },
   {
     "scope": "scim",
     "idName": "list-provisioned-identities",
-    "method": "GET",
-    "path": "/scim/v2/organizations/:org/Users",
+    "route": "GET /scim/v2/organizations/:org/Users",
     "params": [
       "org"
     ]
@@ -4183,8 +3800,7 @@
   {
     "scope": "scim",
     "idName": "provision-and-invite-users",
-    "method": "POST",
-    "path": "/scim/v2/organizations/:org/Users",
+    "route": "POST /scim/v2/organizations/:org/Users",
     "params": [
       "org"
     ]
@@ -4192,8 +3808,7 @@
   {
     "scope": "scim",
     "idName": "provision-invite-users",
-    "method": "POST",
-    "path": "/scim/v2/organizations/:org/Users",
+    "route": "POST /scim/v2/organizations/:org/Users",
     "params": [
       "org"
     ]
@@ -4201,8 +3816,7 @@
   {
     "scope": "scim",
     "idName": "get-provisioning-details-for-user",
-    "method": "GET",
-    "path": "/scim/v2/organizations/:org/Users/:external_identity_guid",
+    "route": "GET /scim/v2/organizations/:org/Users/:external_identity_guid",
     "params": [
       "org",
       "external_identity_guid"
@@ -4211,8 +3825,7 @@
   {
     "scope": "scim",
     "idName": "update-user-attribute",
-    "method": "PATCH",
-    "path": "/scim/v2/organizations/:org/Users/:external_identity_guid",
+    "route": "PATCH /scim/v2/organizations/:org/Users/:external_identity_guid",
     "params": [
       "org",
       "external_identity_guid"
@@ -4221,8 +3834,7 @@
   {
     "scope": "scim",
     "idName": "update-provisioned-org-membership",
-    "method": "PUT",
-    "path": "/scim/v2/organizations/:org/Users/:external_identity_guid",
+    "route": "PUT /scim/v2/organizations/:org/Users/:external_identity_guid",
     "params": [
       "org",
       "external_identity_guid"
@@ -4231,8 +3843,7 @@
   {
     "scope": "scim",
     "idName": "remove-user-from-org",
-    "method": "DELETE",
-    "path": "/scim/v2/organizations/:org/Users/:external_identity_guid",
+    "route": "DELETE /scim/v2/organizations/:org/Users/:external_identity_guid",
     "params": [
       "org",
       "external_identity_guid"
@@ -4241,8 +3852,7 @@
   {
     "scope": "search",
     "idName": "code",
-    "method": "GET",
-    "path": "/search/code",
+    "route": "GET /search/code",
     "params": [
       "q"
     ]
@@ -4250,8 +3860,7 @@
   {
     "scope": "search",
     "idName": "commits",
-    "method": "GET",
-    "path": "/search/commits",
+    "route": "GET /search/commits",
     "params": [
       "q"
     ],
@@ -4262,8 +3871,7 @@
   {
     "scope": "search",
     "idName": "issues-and-pull-requests",
-    "method": "GET",
-    "path": "/search/issues",
+    "route": "GET /search/issues",
     "params": [
       "q"
     ]
@@ -4271,8 +3879,7 @@
   {
     "scope": "search",
     "idName": "issues",
-    "method": "GET",
-    "path": "/search/issues",
+    "route": "GET /search/issues",
     "params": [
       "q"
     ]
@@ -4280,8 +3887,7 @@
   {
     "scope": "search",
     "idName": "labels",
-    "method": "GET",
-    "path": "/search/labels",
+    "route": "GET /search/labels",
     "params": [
       "repository_id",
       "q"
@@ -4290,8 +3896,7 @@
   {
     "scope": "search",
     "idName": "repos",
-    "method": "GET",
-    "path": "/search/repositories",
+    "route": "GET /search/repositories",
     "params": [
       "q"
     ]
@@ -4299,8 +3904,7 @@
   {
     "scope": "search",
     "idName": "topics",
-    "method": "GET",
-    "path": "/search/topics",
+    "route": "GET /search/topics",
     "params": [
       "q"
     ]
@@ -4308,8 +3912,7 @@
   {
     "scope": "search",
     "idName": "users",
-    "method": "GET",
-    "path": "/search/users",
+    "route": "GET /search/users",
     "params": [
       "q"
     ]
@@ -4317,8 +3920,7 @@
   {
     "scope": "teams",
     "idName": "get",
-    "method": "GET",
-    "path": "/teams/:team_id",
+    "route": "GET /teams/:team_id",
     "params": [
       "team_id"
     ]
@@ -4326,8 +3928,7 @@
   {
     "scope": "teams",
     "idName": "edit",
-    "method": "PATCH",
-    "path": "/teams/:team_id",
+    "route": "PATCH /teams/:team_id",
     "params": [
       "team_id",
       "name"
@@ -4336,8 +3937,7 @@
   {
     "scope": "teams",
     "idName": "delete",
-    "method": "DELETE",
-    "path": "/teams/:team_id",
+    "route": "DELETE /teams/:team_id",
     "params": [
       "team_id"
     ]
@@ -4345,8 +3945,7 @@
   {
     "scope": "teams",
     "idName": "list-discussions",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions",
+    "route": "GET /teams/:team_id/discussions",
     "params": [
       "team_id"
     ],
@@ -4357,8 +3956,7 @@
   {
     "scope": "teams",
     "idName": "create-discussion",
-    "method": "POST",
-    "path": "/teams/:team_id/discussions",
+    "route": "POST /teams/:team_id/discussions",
     "params": [
       "team_id",
       "title",
@@ -4371,8 +3969,7 @@
   {
     "scope": "teams",
     "idName": "get-discussion",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions/:discussion_number",
+    "route": "GET /teams/:team_id/discussions/:discussion_number",
     "params": [
       "team_id",
       "discussion_number"
@@ -4384,8 +3981,7 @@
   {
     "scope": "teams",
     "idName": "edit-discussion",
-    "method": "PATCH",
-    "path": "/teams/:team_id/discussions/:discussion_number",
+    "route": "PATCH /teams/:team_id/discussions/:discussion_number",
     "params": [
       "team_id",
       "discussion_number"
@@ -4397,8 +3993,7 @@
   {
     "scope": "teams",
     "idName": "delete-discussion",
-    "method": "DELETE",
-    "path": "/teams/:team_id/discussions/:discussion_number",
+    "route": "DELETE /teams/:team_id/discussions/:discussion_number",
     "params": [
       "team_id",
       "discussion_number"
@@ -4410,8 +4005,7 @@
   {
     "scope": "teams",
     "idName": "list-discussion-comments",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments",
+    "route": "GET /teams/:team_id/discussions/:discussion_number/comments",
     "params": [
       "team_id",
       "discussion_number"
@@ -4423,8 +4017,7 @@
   {
     "scope": "teams",
     "idName": "create-discussion-comment",
-    "method": "POST",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments",
+    "route": "POST /teams/:team_id/discussions/:discussion_number/comments",
     "params": [
       "team_id",
       "discussion_number",
@@ -4437,8 +4030,7 @@
   {
     "scope": "teams",
     "idName": "get-discussion-comment",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number",
+    "route": "GET /teams/:team_id/discussions/:discussion_number/comments/:comment_number",
     "params": [
       "team_id",
       "discussion_number",
@@ -4451,8 +4043,7 @@
   {
     "scope": "teams",
     "idName": "edit-discussion-comment",
-    "method": "PATCH",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number",
+    "route": "PATCH /teams/:team_id/discussions/:discussion_number/comments/:comment_number",
     "params": [
       "team_id",
       "discussion_number",
@@ -4466,8 +4057,7 @@
   {
     "scope": "teams",
     "idName": "delete-discussion-comment",
-    "method": "DELETE",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number",
+    "route": "DELETE /teams/:team_id/discussions/:discussion_number/comments/:comment_number",
     "params": [
       "team_id",
       "discussion_number",
@@ -4480,8 +4070,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-team-discussion-comment",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions",
+    "route": "GET /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions",
     "params": [
       "team_id",
       "discussion_number",
@@ -4494,8 +4083,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-team-discussion-comment",
-    "method": "POST",
-    "path": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions",
+    "route": "POST /teams/:team_id/discussions/:discussion_number/comments/:comment_number/reactions",
     "params": [
       "team_id",
       "discussion_number",
@@ -4509,8 +4097,7 @@
   {
     "scope": "reactions",
     "idName": "list-for-team-discussion",
-    "method": "GET",
-    "path": "/teams/:team_id/discussions/:discussion_number/reactions",
+    "route": "GET /teams/:team_id/discussions/:discussion_number/reactions",
     "params": [
       "team_id",
       "discussion_number"
@@ -4522,8 +4109,7 @@
   {
     "scope": "reactions",
     "idName": "create-for-team-discussion",
-    "method": "POST",
-    "path": "/teams/:team_id/discussions/:discussion_number/reactions",
+    "route": "POST /teams/:team_id/discussions/:discussion_number/reactions",
     "params": [
       "team_id",
       "discussion_number",
@@ -4536,8 +4122,7 @@
   {
     "scope": "teams",
     "idName": "list-pending-invitations",
-    "method": "GET",
-    "path": "/teams/:team_id/invitations",
+    "route": "GET /teams/:team_id/invitations",
     "params": [
       "team_id"
     ]
@@ -4545,8 +4130,7 @@
   {
     "scope": "teams",
     "idName": "list-members",
-    "method": "GET",
-    "path": "/teams/:team_id/members",
+    "route": "GET /teams/:team_id/members",
     "params": [
       "team_id"
     ]
@@ -4554,8 +4138,7 @@
   {
     "scope": "teams",
     "idName": "get-member",
-    "method": "GET",
-    "path": "/teams/:team_id/members/:username",
+    "route": "GET /teams/:team_id/members/:username",
     "params": [
       "team_id",
       "username"
@@ -4564,8 +4147,7 @@
   {
     "scope": "teams",
     "idName": "add-member",
-    "method": "PUT",
-    "path": "/teams/:team_id/members/:username",
+    "route": "PUT /teams/:team_id/members/:username",
     "params": [
       "team_id",
       "username"
@@ -4574,8 +4156,7 @@
   {
     "scope": "teams",
     "idName": "remove-member",
-    "method": "DELETE",
-    "path": "/teams/:team_id/members/:username",
+    "route": "DELETE /teams/:team_id/members/:username",
     "params": [
       "team_id",
       "username"
@@ -4584,8 +4165,7 @@
   {
     "scope": "teams",
     "idName": "get-membership",
-    "method": "GET",
-    "path": "/teams/:team_id/memberships/:username",
+    "route": "GET /teams/:team_id/memberships/:username",
     "params": [
       "team_id",
       "username"
@@ -4594,8 +4174,7 @@
   {
     "scope": "teams",
     "idName": "add-or-update-membership",
-    "method": "PUT",
-    "path": "/teams/:team_id/memberships/:username",
+    "route": "PUT /teams/:team_id/memberships/:username",
     "params": [
       "team_id",
       "username"
@@ -4604,8 +4183,7 @@
   {
     "scope": "teams",
     "idName": "remove-membership",
-    "method": "DELETE",
-    "path": "/teams/:team_id/memberships/:username",
+    "route": "DELETE /teams/:team_id/memberships/:username",
     "params": [
       "team_id",
       "username"
@@ -4614,8 +4192,7 @@
   {
     "scope": "teams",
     "idName": "list-projects",
-    "method": "GET",
-    "path": "/teams/:team_id/projects",
+    "route": "GET /teams/:team_id/projects",
     "params": [
       "team_id"
     ],
@@ -4626,8 +4203,7 @@
   {
     "scope": "teams",
     "idName": "review-project",
-    "method": "GET",
-    "path": "/teams/:team_id/projects/:project_id",
+    "route": "GET /teams/:team_id/projects/:project_id",
     "params": [
       "team_id",
       "project_id"
@@ -4639,8 +4215,7 @@
   {
     "scope": "teams",
     "idName": "add-or-update-project",
-    "method": "PUT",
-    "path": "/teams/:team_id/projects/:project_id",
+    "route": "PUT /teams/:team_id/projects/:project_id",
     "params": [
       "team_id",
       "project_id"
@@ -4652,8 +4227,7 @@
   {
     "scope": "teams",
     "idName": "remove-project",
-    "method": "DELETE",
-    "path": "/teams/:team_id/projects/:project_id",
+    "route": "DELETE /teams/:team_id/projects/:project_id",
     "params": [
       "team_id",
       "project_id"
@@ -4662,8 +4236,7 @@
   {
     "scope": "teams",
     "idName": "list-repos",
-    "method": "GET",
-    "path": "/teams/:team_id/repos",
+    "route": "GET /teams/:team_id/repos",
     "params": [
       "team_id"
     ]
@@ -4671,8 +4244,7 @@
   {
     "scope": "teams",
     "idName": "check-manages-repo",
-    "method": "GET",
-    "path": "/teams/:team_id/repos/:owner/:repo",
+    "route": "GET /teams/:team_id/repos/:owner/:repo",
     "params": [
       "team_id",
       "owner",
@@ -4682,8 +4254,7 @@
   {
     "scope": "teams",
     "idName": "add-or-update-repo",
-    "method": "PUT",
-    "path": "/teams/:team_id/repos/:owner/:repo",
+    "route": "PUT /teams/:team_id/repos/:owner/:repo",
     "params": [
       "team_id",
       "owner",
@@ -4693,8 +4264,7 @@
   {
     "scope": "teams",
     "idName": "remove-repo",
-    "method": "DELETE",
-    "path": "/teams/:team_id/repos/:owner/:repo",
+    "route": "DELETE /teams/:team_id/repos/:owner/:repo",
     "params": [
       "team_id",
       "owner",
@@ -4704,8 +4274,7 @@
   {
     "scope": "teams",
     "idName": "list-child",
-    "method": "GET",
-    "path": "/teams/:team_id/teams",
+    "route": "GET /teams/:team_id/teams",
     "params": [
       "team_id"
     ],
@@ -4716,29 +4285,25 @@
   {
     "scope": "users",
     "idName": "get-authenticated",
-    "method": "GET",
-    "path": "/user",
+    "route": "GET /user",
     "params": []
   },
   {
     "scope": "users",
     "idName": "update-authenticated",
-    "method": "PATCH",
-    "path": "/user",
+    "route": "PATCH /user",
     "params": []
   },
   {
     "scope": "users",
     "idName": "list-blocked",
-    "method": "GET",
-    "path": "/user/blocks",
+    "route": "GET /user/blocks",
     "params": []
   },
   {
     "scope": "users",
     "idName": "check-blocked",
-    "method": "GET",
-    "path": "/user/blocks/:username",
+    "route": "GET /user/blocks/:username",
     "params": [
       "username"
     ]
@@ -4746,8 +4311,7 @@
   {
     "scope": "users",
     "idName": "block",
-    "method": "PUT",
-    "path": "/user/blocks/:username",
+    "route": "PUT /user/blocks/:username",
     "params": [
       "username"
     ]
@@ -4755,8 +4319,7 @@
   {
     "scope": "users",
     "idName": "unblock",
-    "method": "DELETE",
-    "path": "/user/blocks/:username",
+    "route": "DELETE /user/blocks/:username",
     "params": [
       "username"
     ]
@@ -4764,8 +4327,7 @@
   {
     "scope": "users",
     "idName": "toggle-primary-email-visibility",
-    "method": "PATCH",
-    "path": "/user/email/visibility",
+    "route": "PATCH /user/email/visibility",
     "params": [
       "email",
       "visibility"
@@ -4774,15 +4336,13 @@
   {
     "scope": "users",
     "idName": "list-emails",
-    "method": "GET",
-    "path": "/user/emails",
+    "route": "GET /user/emails",
     "params": []
   },
   {
     "scope": "users",
     "idName": "add-emails",
-    "method": "POST",
-    "path": "/user/emails",
+    "route": "POST /user/emails",
     "params": [
       "emails"
     ]
@@ -4790,8 +4350,7 @@
   {
     "scope": "users",
     "idName": "delete-emails",
-    "method": "DELETE",
-    "path": "/user/emails",
+    "route": "DELETE /user/emails",
     "params": [
       "emails"
     ]
@@ -4799,22 +4358,19 @@
   {
     "scope": "users",
     "idName": "list-followers-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/followers",
+    "route": "GET /user/followers",
     "params": []
   },
   {
     "scope": "users",
     "idName": "list-following-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/following",
+    "route": "GET /user/following",
     "params": []
   },
   {
     "scope": "users",
     "idName": "check-following",
-    "method": "GET",
-    "path": "/user/following/:username",
+    "route": "GET /user/following/:username",
     "params": [
       "username"
     ]
@@ -4822,8 +4378,7 @@
   {
     "scope": "users",
     "idName": "follow",
-    "method": "PUT",
-    "path": "/user/following/:username",
+    "route": "PUT /user/following/:username",
     "params": [
       "username"
     ]
@@ -4831,8 +4386,7 @@
   {
     "scope": "users",
     "idName": "unfollow",
-    "method": "DELETE",
-    "path": "/user/following/:username",
+    "route": "DELETE /user/following/:username",
     "params": [
       "username"
     ]
@@ -4840,22 +4394,19 @@
   {
     "scope": "users",
     "idName": "list-gpg-keys",
-    "method": "GET",
-    "path": "/user/gpg_keys",
+    "route": "GET /user/gpg_keys",
     "params": []
   },
   {
     "scope": "users",
     "idName": "create-gpg-key",
-    "method": "POST",
-    "path": "/user/gpg_keys",
+    "route": "POST /user/gpg_keys",
     "params": []
   },
   {
     "scope": "users",
     "idName": "get-gpg-key",
-    "method": "GET",
-    "path": "/user/gpg_keys/:gpg_key_id",
+    "route": "GET /user/gpg_keys/:gpg_key_id",
     "params": [
       "gpg_key_id"
     ]
@@ -4863,8 +4414,7 @@
   {
     "scope": "users",
     "idName": "delete-gpg-key",
-    "method": "DELETE",
-    "path": "/user/gpg_keys/:gpg_key_id",
+    "route": "DELETE /user/gpg_keys/:gpg_key_id",
     "params": [
       "gpg_key_id"
     ]
@@ -4872,8 +4422,7 @@
   {
     "scope": "apps",
     "idName": "list-installations-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/installations",
+    "route": "GET /user/installations",
     "params": [],
     "headers": {
       "accept": "application/vnd.machine-man"
@@ -4882,8 +4431,7 @@
   {
     "scope": "apps",
     "idName": "list-installation-repos-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/installations/:installation_id/repositories",
+    "route": "GET /user/installations/:installation_id/repositories",
     "params": [
       "installation_id"
     ],
@@ -4894,8 +4442,7 @@
   {
     "scope": "apps",
     "idName": "add-repo-to-installation",
-    "method": "PUT",
-    "path": "/user/installations/:installation_id/repositories/:repository_id",
+    "route": "PUT /user/installations/:installation_id/repositories/:repository_id",
     "params": [
       "installation_id",
       "repository_id"
@@ -4907,8 +4454,7 @@
   {
     "scope": "apps",
     "idName": "remove-repo-from-installation",
-    "method": "DELETE",
-    "path": "/user/installations/:installation_id/repositories/:repository_id",
+    "route": "DELETE /user/installations/:installation_id/repositories/:repository_id",
     "params": [
       "installation_id",
       "repository_id"
@@ -4920,29 +4466,25 @@
   {
     "scope": "issues",
     "idName": "list-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/issues",
+    "route": "GET /user/issues",
     "params": []
   },
   {
     "scope": "users",
     "idName": "list-public-keys",
-    "method": "GET",
-    "path": "/user/keys",
+    "route": "GET /user/keys",
     "params": []
   },
   {
     "scope": "users",
     "idName": "create-public-key",
-    "method": "POST",
-    "path": "/user/keys",
+    "route": "POST /user/keys",
     "params": []
   },
   {
     "scope": "users",
     "idName": "get-public-key",
-    "method": "GET",
-    "path": "/user/keys/:key_id",
+    "route": "GET /user/keys/:key_id",
     "params": [
       "key_id"
     ]
@@ -4950,8 +4492,7 @@
   {
     "scope": "users",
     "idName": "delete-public-key",
-    "method": "DELETE",
-    "path": "/user/keys/:key_id",
+    "route": "DELETE /user/keys/:key_id",
     "params": [
       "key_id"
     ]
@@ -4959,29 +4500,25 @@
   {
     "scope": "apps",
     "idName": "list-marketplace-purchases-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/marketplace_purchases",
+    "route": "GET /user/marketplace_purchases",
     "params": []
   },
   {
     "scope": "apps",
     "idName": "list-marketplace-purchases-for-authenticated-user-stubbed",
-    "method": "GET",
-    "path": "/user/marketplace_purchases/stubbed",
+    "route": "GET /user/marketplace_purchases/stubbed",
     "params": []
   },
   {
     "scope": "orgs",
     "idName": "list-memberships",
-    "method": "GET",
-    "path": "/user/memberships/orgs",
+    "route": "GET /user/memberships/orgs",
     "params": []
   },
   {
     "scope": "orgs",
     "idName": "get-membership-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/memberships/orgs/:org",
+    "route": "GET /user/memberships/orgs/:org",
     "params": [
       "org"
     ]
@@ -4989,8 +4526,7 @@
   {
     "scope": "orgs",
     "idName": "edit-membership",
-    "method": "PATCH",
-    "path": "/user/memberships/orgs/:org",
+    "route": "PATCH /user/memberships/orgs/:org",
     "params": [
       "org",
       "state"
@@ -4999,8 +4535,7 @@
   {
     "scope": "migrations",
     "idName": "list-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/migrations",
+    "route": "GET /user/migrations",
     "params": [],
     "headers": {
       "accept": "application/vnd.wyandotte"
@@ -5009,8 +4544,7 @@
   {
     "scope": "migrations",
     "idName": "start-for-authenticated-user",
-    "method": "POST",
-    "path": "/user/migrations",
+    "route": "POST /user/migrations",
     "params": [
       "repositories"
     ]
@@ -5018,8 +4552,7 @@
   {
     "scope": "migrations",
     "idName": "get-status-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/migrations/:migration_id",
+    "route": "GET /user/migrations/:migration_id",
     "params": [
       "migration_id"
     ],
@@ -5030,8 +4563,7 @@
   {
     "scope": "migrations",
     "idName": "get-archive-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/migrations/:migration_id/archive",
+    "route": "GET /user/migrations/:migration_id/archive",
     "params": [
       "migration_id"
     ],
@@ -5042,8 +4574,7 @@
   {
     "scope": "migrations",
     "idName": "delete-archive-for-authenticated-user",
-    "method": "DELETE",
-    "path": "/user/migrations/:migration_id/archive",
+    "route": "DELETE /user/migrations/:migration_id/archive",
     "params": [
       "migration_id"
     ],
@@ -5054,8 +4585,7 @@
   {
     "scope": "migrations",
     "idName": "unlock-repo-for-authenticated-user",
-    "method": "DELETE",
-    "path": "/user/migrations/:migration_id/repos/:repo_name/lock",
+    "route": "DELETE /user/migrations/:migration_id/repos/:repo_name/lock",
     "params": [
       "migration_id",
       "repo_name"
@@ -5067,15 +4597,13 @@
   {
     "scope": "orgs",
     "idName": "list-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/orgs",
+    "route": "GET /user/orgs",
     "params": []
   },
   {
     "scope": "projects",
     "idName": "create-for-authenticated-user",
-    "method": "POST",
-    "path": "/user/projects",
+    "route": "POST /user/projects",
     "params": [
       "name"
     ],
@@ -5086,22 +4614,19 @@
   {
     "scope": "users",
     "idName": "list-public-emails",
-    "method": "GET",
-    "path": "/user/public_emails",
+    "route": "GET /user/public_emails",
     "params": []
   },
   {
     "scope": "repos",
     "idName": "list",
-    "method": "GET",
-    "path": "/user/repos",
+    "route": "GET /user/repos",
     "params": []
   },
   {
     "scope": "repos",
     "idName": "create-for-authenticated-user",
-    "method": "POST",
-    "path": "/user/repos",
+    "route": "POST /user/repos",
     "params": [
       "name"
     ]
@@ -5109,15 +4634,13 @@
   {
     "scope": "repos",
     "idName": "list-invitations-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/repository_invitations",
+    "route": "GET /user/repository_invitations",
     "params": []
   },
   {
     "scope": "repos",
     "idName": "accept-invitation",
-    "method": "PATCH",
-    "path": "/user/repository_invitations/:invitation_id",
+    "route": "PATCH /user/repository_invitations/:invitation_id",
     "params": [
       "invitation_id"
     ]
@@ -5125,8 +4648,7 @@
   {
     "scope": "repos",
     "idName": "decline-invitation",
-    "method": "DELETE",
-    "path": "/user/repository_invitations/:invitation_id",
+    "route": "DELETE /user/repository_invitations/:invitation_id",
     "params": [
       "invitation_id"
     ]
@@ -5134,15 +4656,13 @@
   {
     "scope": "activity",
     "idName": "list-repos-starred-by-authenticated-user",
-    "method": "GET",
-    "path": "/user/starred",
+    "route": "GET /user/starred",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "check-starring-repo",
-    "method": "GET",
-    "path": "/user/starred/:owner/:repo",
+    "route": "GET /user/starred/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5151,8 +4671,7 @@
   {
     "scope": "activity",
     "idName": "star-repo",
-    "method": "PUT",
-    "path": "/user/starred/:owner/:repo",
+    "route": "PUT /user/starred/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5161,8 +4680,7 @@
   {
     "scope": "activity",
     "idName": "unstar-repo",
-    "method": "DELETE",
-    "path": "/user/starred/:owner/:repo",
+    "route": "DELETE /user/starred/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5171,15 +4689,13 @@
   {
     "scope": "activity",
     "idName": "list-watched-repos-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/subscriptions",
+    "route": "GET /user/subscriptions",
     "params": []
   },
   {
     "scope": "activity",
     "idName": "check-watching-repo-legacy",
-    "method": "GET",
-    "path": "/user/subscriptions/:owner/:repo",
+    "route": "GET /user/subscriptions/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5188,8 +4704,7 @@
   {
     "scope": "activity",
     "idName": "watch-repo-legacy",
-    "method": "PUT",
-    "path": "/user/subscriptions/:owner/:repo",
+    "route": "PUT /user/subscriptions/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5198,8 +4713,7 @@
   {
     "scope": "activity",
     "idName": "stop-watching-repo-legacy",
-    "method": "DELETE",
-    "path": "/user/subscriptions/:owner/:repo",
+    "route": "DELETE /user/subscriptions/:owner/:repo",
     "params": [
       "owner",
       "repo"
@@ -5208,22 +4722,19 @@
   {
     "scope": "teams",
     "idName": "list-for-authenticated-user",
-    "method": "GET",
-    "path": "/user/teams",
+    "route": "GET /user/teams",
     "params": []
   },
   {
     "scope": "users",
     "idName": "list",
-    "method": "GET",
-    "path": "/users",
+    "route": "GET /users",
     "params": []
   },
   {
     "scope": "users",
     "idName": "get-by-username",
-    "method": "GET",
-    "path": "/users/:username",
+    "route": "GET /users/:username",
     "params": [
       "username"
     ]
@@ -5231,8 +4742,7 @@
   {
     "scope": "activity",
     "idName": "list-events-for-user",
-    "method": "GET",
-    "path": "/users/:username/events",
+    "route": "GET /users/:username/events",
     "params": [
       "username"
     ]
@@ -5240,8 +4750,7 @@
   {
     "scope": "activity",
     "idName": "list-events-for-org",
-    "method": "GET",
-    "path": "/users/:username/events/orgs/:org",
+    "route": "GET /users/:username/events/orgs/:org",
     "params": [
       "username",
       "org"
@@ -5250,8 +4759,7 @@
   {
     "scope": "activity",
     "idName": "list-public-events-for-user",
-    "method": "GET",
-    "path": "/users/:username/events/public",
+    "route": "GET /users/:username/events/public",
     "params": [
       "username"
     ]
@@ -5259,8 +4767,7 @@
   {
     "scope": "users",
     "idName": "list-followers-for-user",
-    "method": "GET",
-    "path": "/users/:username/followers",
+    "route": "GET /users/:username/followers",
     "params": [
       "username"
     ]
@@ -5268,8 +4775,7 @@
   {
     "scope": "users",
     "idName": "list-following-for-user",
-    "method": "GET",
-    "path": "/users/:username/following",
+    "route": "GET /users/:username/following",
     "params": [
       "username"
     ]
@@ -5277,8 +4783,7 @@
   {
     "scope": "users",
     "idName": "check-following-for-user",
-    "method": "GET",
-    "path": "/users/:username/following/:target_user",
+    "route": "GET /users/:username/following/:target_user",
     "params": [
       "username",
       "target_user"
@@ -5287,8 +4792,7 @@
   {
     "scope": "gists",
     "idName": "list-public-for-user",
-    "method": "GET",
-    "path": "/users/:username/gists",
+    "route": "GET /users/:username/gists",
     "params": [
       "username"
     ]
@@ -5296,8 +4800,7 @@
   {
     "scope": "users",
     "idName": "list-gpg-keys-for-user",
-    "method": "GET",
-    "path": "/users/:username/gpg_keys",
+    "route": "GET /users/:username/gpg_keys",
     "params": [
       "username"
     ]
@@ -5305,8 +4808,7 @@
   {
     "scope": "users",
     "idName": "get-context-for-user",
-    "method": "GET",
-    "path": "/users/:username/hovercard",
+    "route": "GET /users/:username/hovercard",
     "params": [
       "username"
     ],
@@ -5317,8 +4819,7 @@
   {
     "scope": "apps",
     "idName": "find-user-installation",
-    "method": "GET",
-    "path": "/users/:username/installation",
+    "route": "GET /users/:username/installation",
     "params": [
       "username"
     ],
@@ -5329,8 +4830,7 @@
   {
     "scope": "users",
     "idName": "list-public-keys-for-user",
-    "method": "GET",
-    "path": "/users/:username/keys",
+    "route": "GET /users/:username/keys",
     "params": [
       "username"
     ]
@@ -5338,8 +4838,7 @@
   {
     "scope": "orgs",
     "idName": "list-for-user",
-    "method": "GET",
-    "path": "/users/:username/orgs",
+    "route": "GET /users/:username/orgs",
     "params": [
       "username"
     ]
@@ -5347,8 +4846,7 @@
   {
     "scope": "projects",
     "idName": "list-for-user",
-    "method": "GET",
-    "path": "/users/:username/projects",
+    "route": "GET /users/:username/projects",
     "params": [
       "username"
     ],
@@ -5359,8 +4857,7 @@
   {
     "scope": "activity",
     "idName": "list-received-events-for-user",
-    "method": "GET",
-    "path": "/users/:username/received_events",
+    "route": "GET /users/:username/received_events",
     "params": [
       "username"
     ]
@@ -5368,8 +4865,7 @@
   {
     "scope": "activity",
     "idName": "list-received-public-events-for-user",
-    "method": "GET",
-    "path": "/users/:username/received_events/public",
+    "route": "GET /users/:username/received_events/public",
     "params": [
       "username"
     ]
@@ -5377,8 +4873,7 @@
   {
     "scope": "repos",
     "idName": "list-for-user",
-    "method": "GET",
-    "path": "/users/:username/repos",
+    "route": "GET /users/:username/repos",
     "params": [
       "username"
     ]
@@ -5386,8 +4881,7 @@
   {
     "scope": "activity",
     "idName": "list-repos-starred-by-user",
-    "method": "GET",
-    "path": "/users/:username/starred",
+    "route": "GET /users/:username/starred",
     "params": [
       "username"
     ]
@@ -5395,8 +4889,7 @@
   {
     "scope": "activity",
     "idName": "list-repos-watched-by-user",
-    "method": "GET",
-    "path": "/users/:username/subscriptions",
+    "route": "GET /users/:username/subscriptions",
     "params": [
       "username"
     ]
@@ -5404,8 +4897,7 @@
   {
     "scope": "repos",
     "idName": "upload-release-asset",
-    "method": "POST",
-    "path": ":url",
+    "route": "POST :url",
     "params": [
       "url",
       "Content-Length",
