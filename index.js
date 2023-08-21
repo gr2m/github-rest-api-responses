@@ -1,5 +1,5 @@
 const { writeFileSync } = require('fs')
-const FILE_PATH = 'requests.json'
+const FILE_PATH = 'generated/requests.json'
 
 const sortBy = require('lodash/sortBy')
 const ROUTES = require('@octokit/routes')
@@ -17,7 +17,7 @@ const requests = Object.keys(ROUTES).reduce((requests, scope) => {
 
     requests.push(
       Object.assign(
-        { scope, idName, method, path, params: requestParams },
+        { scope, idName, route: `${method} ${path}`, params: requestParams },
         acceptHeader ? { headers: { accept: acceptHeader } } : {}
       )
     )
@@ -27,7 +27,10 @@ const requests = Object.keys(ROUTES).reduce((requests, scope) => {
 }, [])
 
 const methodOrder = ['GET', 'HEAD', 'POST', 'PATCH', 'PUT', 'DELETE']
-const sortedUniqRequests = sortBy(requests, request => `${request.path}/ ${methodOrder.indexOf(request.method)}`)
+const sortedUniqRequests = sortBy(requests, request => {
+  const [method, path] = request.route.split(' ')
+  return `${path}/ ${methodOrder.indexOf(method)}`
+})
 console.log(`${requests.length} requests found`)
 writeFileSync(FILE_PATH, JSON.stringify(sortedUniqRequests, null, 2))
 console.log(`${FILE_PATH} updated.`)
